@@ -1,3 +1,15 @@
 # Natural Language Processing
 
-This repo is for some non-academic Natural language processing projects e.g. Text Classification, Text Generation, Chat Bots etc.
+This repository is for some non-academic Natural language processing projects: Text Classification, Text Generation, Chat Bots etc.
+
+
+## Libraries
+
+| Library | Ref. |
+| ------ | ------ |
+| Spacy | [https://spacy.io/] |
+| Pandas | [https://pandas.pydata.org/] |
+| Textacy | [https://pypi.org/project/textacy/] |
+
+## License
+MIT
