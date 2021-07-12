@@ -1,0 +1,97 @@
+{
+    "version": "0.15",
+    "groups": [
+      {
+        "name": "XKCD",
+        "urls": [],
+        "substitutions": [
+          {
+            "input": "witnesses",
+            "inputType": "text",
+            "output": "these dudes I know",
+            "caseSensitive": false
+          },
+          {
+            "input": "allegedly",
+            "inputType": "text",
+            "output": "kinda probably",
+            "caseSensitive": false
+          },
+          {
+            "input": "new study",
+            "inputType": "text",
+            "output": "tumblr post",
+            "caseSensitive": false
+          },
+          {
+            "input": "rebuild",
+            "inputType": "text",
+            "output": "avenge",
+            "caseSensitive": false
+          },
+          {
+            "input": "space",
+            "inputType": "text",
+            "output": "spaaace",
+            "caseSensitive": false
+          },
+          {
+            "input": "google glass",
+            "inputType": "text",
+            "output": "virtual boy",
+            "caseSensitive": false
+          },
+          {
+            "input": "smartphone",
+            "inputType": "text",
+            "output": "pok\u00e9dex",
+            "caseSensitive": false
+          },
+          {
+            "input": "electric",
+            "inputType": "text",
+            "output": "atomic",
+            "caseSensitive": false
+          },
+          {
+            "input": "senator",
+            "inputType": "text",
+            "output": "elf-lord",
+            "caseSensitive": false
+          },
+          {
+            "input": "car",
+            "inputType": "text",
+            "output": "cat",
+            "caseSensitive": false
+          },
+          {
+            "input": "election",
+            "inputType": "text",
+            "output": "eating contest",
+            "caseSensitive": false
+          },
+          {
+            "input": "congressional leaders",
+            "inputType": "text",
+            "output": "river spirits",
+            "caseSensitive": false
+          },
+          {
+            "input": "homeland security",
+            "inputType": "text",
+            "output": "homestar runner",
+            "caseSensitive": false
+          },
+          {
+            "input": "could not be reached for comment",
+            "inputType": "text",
+            "output": "is guilty and everyone knows it",
+            "caseSensitive": false
+          }
+        ],
+        "html": "inputoutput",
+        "enabled": true
+      }
+    ]
+  }
