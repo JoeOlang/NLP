@@ -1,23 +1,25 @@
 import nltk
 from nltk.stem import WordNetLemmatizer
-lemmatizer = WordNetLemmatizer()
 import json
 import pickle
-
 import numpy as np
-from keras.models import Sequential
-from keras.layers import Dense, Activation, Dropout
-from keras.optimizers import SGD
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation, Dropout
+from tensorflow.keras.optimizers import SGD
 import random
 
+nltk.download('punkt')
+nltk.download('wordnet')
 
-words =[]
+lemmatizer = WordNetLemmatizer()
+
+words = []
 classes = []
 documents = []
 ignore_words = ['?', '!']
 data_file = open('intents.json').read()
 intents = json.loads(data_file)
-
 
 for intent in intents['intents']:
     for pattern in intent['patterns']:
@@ -59,11 +61,10 @@ for doc in documents:
 
     training.append([bag, output_row])
 
-
 random.shuffle(training)
 training = np.array(training)
 
-train_x = list(training[:,0])
+train_x = list(training[:, 0])
 train_y = list(training[:, 1])
 
 model = Sequential()
@@ -72,7 +73,6 @@ model.add(Dropout(0.5))
 model.add(Dense(64, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(len(train_y[0]), activation='softmax'))
-
 
 sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
