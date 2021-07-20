@@ -4,7 +4,7 @@ import nltk
 from tensorflow.keras.models import load_model
 import json
 import random
-from app import lemmatizer
+from app import lem
 import numpy as np
 
 model = load_model("Chatbot_model.h5")
@@ -15,7 +15,7 @@ classes = pickle.load(open('classes.pkl', 'rb'))
 
 def clean_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
-    sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
+    sentence_words = [lem.lemmatize(word.lower()) for word in sentence_words]
     return sentence_words
 
 

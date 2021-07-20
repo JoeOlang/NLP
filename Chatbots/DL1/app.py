@@ -9,10 +9,10 @@ from tensorflow.keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import SGD
 import random
 
-#nltk.download('punkt')
-#nltk.download('wordnet')
+# nltk.download('punkt')
+# nltk.download('wordnet')
 
-lemmatizer = WordNetLemmatizer()
+lem = WordNetLemmatizer()
 
 words = []
 classes = []
@@ -32,7 +32,7 @@ for intent in intents['intents']:
         if intent['tag'] not in classes:
             classes.append(intent['tag'])
 
-words = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore_words]
+words = [lem.lemmatize(w.lower()) for w in words if w not in ignore_words]
 words = sorted(list(set(words)))
 
 classes = sorted(list(set(classes)))
@@ -51,7 +51,7 @@ for doc in documents:
     bag = []
     pattern_words = doc[0]
 
-    pattern_words = [lemmatizer.lemmatize(word.lower()) for word in pattern_words]
+    pattern_words = [lem.lemmatize(word.lower()) for word in pattern_words]
 
     for w in words:
         bag.append(1) if w in pattern_words else bag.append(0)
