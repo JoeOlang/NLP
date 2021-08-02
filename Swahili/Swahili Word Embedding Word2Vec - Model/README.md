@@ -1,6 +1,6 @@
 # Swahili Word Embedding Vectors
 
-![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+![](https://github.com/JoeOlang/NLP/blob/main/Swahili/Swahili%20Word%20Embedding%20Word2Vec%20-%20Model/media/embedings.gif)
 
 A demo on traning word embedings which can be used as features in place of Tf-Idf &/ Count Vectorizer features. 
 This technique maps words to real number vectors, at the same time capturing context of the text. If two words have similar meaning they will lie close to each other in a vector space. 
