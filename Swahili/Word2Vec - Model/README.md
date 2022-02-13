@@ -1,4 +1,4 @@
-# Swahili Word Embedding Vectors
+# Swahili Word Embeddings Using Word2Vec
 
 ![](https://github.com/JoeOlang/NLP/blob/main/Swahili/Swahili%20Word%20Embedding%20Word2Vec%20-%20Model/media/embedings.gif)
 
