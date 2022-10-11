@@ -10,7 +10,6 @@ small_model = whisper.load_model('small')
 medium_model = whisper.load_model('medium')
 
 
-
 def yt_audio(video_url):
 	yt = YouTube(str(video_url))
 	video = yt.streams.filter(only_audio=True).first()
@@ -23,8 +22,7 @@ def yt_audio(video_url):
 	return str(file_path)
 
 
-
-def trascribe(model_type ,video_url):
+def transcribe(model_type ,video_url):
 
     if model_type == 'Tiny':
         model = tiny_model
@@ -45,15 +43,14 @@ def trascribe(model_type ,video_url):
     return text, language
 
 
-
 demo_app = gr.Interface(
-    title = "Youtube video trascription",
-    description = "Youtube video trascription using OpenAI's Whisper models \n\n 1. Select Model, \n 2. Pick Youtube video, copy video URL, \n 3. Paste URL in the Youtube Video URL input box and click 'Submit' button",
-    fn = trascribe,
+    title = "Youtube video transcription",
+    description = "Youtube video transcription using OpenAI's Whisper models \n\n 1. Select Model, \n 2. Pick a Youtube video, copy the video URL, \n 3. Paste URL in the Youtube Video URL input box and click the 'Submit' button",
+    fn = transcribe,
     inputs = [  gr.Dropdown(choices=['Tiny', 'Base' ,'Small', 'Medium'], label="Model", default='Base'),
                 gr.Textbox(lines=1, placeholder="Youtube Video URL", label="Video URL"),],
 
-    outputs = [ gr.Textbox(placeholder="Transcritpion.", interactive=True, label="Transcription"),
+    outputs = [ gr.Textbox(placeholder="Transcription.", interactive=True, label="Transcription"),
                 gr.Text(placeholder="Detected Language.", interactive=False, label="Language"),],
 
     #examples = speech_samples,     # will be added in next update.
