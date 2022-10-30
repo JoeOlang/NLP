@@ -137,3 +137,5 @@ Chatbots/.DS_Store
 Clustering/bbc-text.csv
 Twitter Streaming/credentials.py
 Practice Chatbot/data/intents.json
+Doc Query/sampledata/data_output.csv
+Doc Query/sampledata/data_input.csv
