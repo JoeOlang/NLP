@@ -1,0 +1,49 @@
+{
+  "builder_name": "csv",
+  "citation": "",
+  "config_name": "default",
+  "dataset_size": 17006616,
+  "description": "",
+  "download_checksums": {
+    "/Users/olang/Desktop/*/Projects/NLP/Doc Query/sampledata/covid_abstracts.csv": {
+      "num_bytes": 16916623,
+      "checksum": "4ab9415d8ef00b8f9512169a8ac4f2b720001beabdf3ff128bd25bb9317ace5c"
+    }
+  },
+  "download_size": 16916623,
+  "features": {
+    "title": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "abstract": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "url": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "title_length": {
+      "dtype": "int64",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 33923239,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 17006616,
+      "num_examples": 10000,
+      "dataset_name": "csv"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
