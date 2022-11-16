@@ -1,0 +1,1016 @@
+spacy -> packaging[version='>=20.0'] -> pyparsing[version='>=2.0.2|>=2.0.2,!=3.0.5']
+numexpr -> packaging -> pyparsing[version='>=2.0.2|>=2.0.2,!=3.0.5']
+bleach -> packaging -> pyparsing[version='>=2.0.2|>=2.0.2,!=3.0.5']
+matplotlib-base -> packaging[version='>=20.0'] -> pyparsing[version='>=2.0.2|>=2.0.2,!=3.0.5']
+datasets -> packaging -> pyparsing[version='>=2.0.2|>=2.0.2,!=3.0.5']
+seaborn-base -> matplotlib-base[version='>=2.2'] -> pyparsing[version='>=2.0.3,!=2.0.4,!=2.1.2,!=2.1.6|>=2.2.1']
+jupyterlab -> packaging -> pyparsing[version='>=2.0.2|>=2.0.2,!=3.0.5']
+
+Package olefile conflicts for:
+pillow -> olefile
+bokeh -> pillow[version='>=7.1.0'] -> olefile
+matplotlib-base -> pillow[version='>=6.2.0'] -> olefile
+torchvision -> pillow[version='>=5.3.0,!=8.3.*'] -> olefile
+wordcloud -> pillow -> olefile
+streamlit -> pillow[version='>=6.2.0'] -> olefile
+
+Package packaging conflicts for:
+jupyterlab -> packaging
+bokeh -> packaging[version='>=16.8']
+pandas -> numexpr[version='>=2.7.1'] -> packaging
+tensorflow-base -> packaging
+numexpr -> packaging
+matplotlib-base -> packaging[version='>=20.0']
+notebook -> ipykernel -> packaging
+datasets -> packaging
+wordcloud -> matplotlib-base -> packaging[version='>=20.0']
+notebook-shim -> jupyter_server[version='>=1.8,<3'] -> packaging
+transformers -> huggingface_hub[version='>=0.10.0,<1.0'] -> packaging[version='>=20.9']
+tensorflow -> tensorflow-base==2.9.1=eigen_py38h36d2db2_1 -> packaging
+huggingface_hub -> packaging[version='>=20.9']
+jupyterlab_server -> packaging
+bleach -> packaging
+spacy -> packaging[version='>=20.0']
+matplotlib -> matplotlib-base[version='>=3.5.3,<3.5.4.0a0'] -> packaging[version='>=20.0']
+sentence-transformers -> huggingface_hub[version='>=0.8.1'] -> packaging[version='>=20.0|>=20.9']
+transformers -> packaging[version='>=20.0']
+seaborn-base -> matplotlib-base[version='>=2.2'] -> packaging[version='>=20.0']
+ipywidgets -> ipykernel[version='>=4.5.1'] -> packaging
+seaborn -> matplotlib-base[version='>=3.1,!=3.6.1'] -> packaging[version='>=20.0|>=21.3']
+datasets -> huggingface_hub[version='>=0.2.0,<1.0.0'] -> packaging[version='>=20.9']
+statsmodels -> packaging[version='>=21.3']
+jupyter_server -> packaging
+nbconvert -> packaging
+pydeck -> ipykernel[version='>=5.1.2'] -> packaging
+nbclassic -> ipykernel -> packaging
+streamlit -> packaging[version='>=14.1']
+ipykernel -> packaging
+
+Package py7zr conflicts for:
+datasets -> py7zr
+transformers -> datasets -> py7zr
+
+Package oauthlib conflicts for:
+tweepy -> requests-oauthlib[version='>=1.2.0,<2'] -> oauthlib[version='>=0.6.2|>=3.0.0']
+requests-oauthlib -> oauthlib[version='>=0.6.2|>=3.0.0']
+tweepy -> oauthlib[version='>=3.2.0,<4']
+google-auth-oauthlib -> requests-oauthlib[version='>=0.7.0'] -> oauthlib[version='>=0.6.2|>=3.0.0']
+
+Package x264 conflicts for:
+ffmpeg -> x264[version='>=1!152.20180806,<1!153|>=1!157.20191217,<1!158']
+torchvision -> ffmpeg[version='>=4.2'] -> x264[version='>=1!152.20180806,<1!153|>=1!157.20191217,<1!158']
+
+Package argon2-cffi conflicts for:
+jupyter_server -> argon2-cffi
+notebook -> argon2-cffi
+jupyterlab -> jupyter_server[version='>=1.16,<2'] -> argon2-cffi
+widgetsnbextension -> notebook[version='>=4.4.1'] -> argon2-cffi
+jupyterlab_server -> jupyter_server[version='>=1.8,<2'] -> argon2-cffi
+notebook-shim -> jupyter_server[version='>=1.8,<3'] -> argon2-cffi
+nbclassic -> argon2-cffi
+
+Package libcurl conflicts for:
+tensorflow-estimator -> tensorflow-base==2.7.0=cpu_py39h326c378_0 -> libcurl[version='>=7.81.0,<8.0a0']
+tensorflow-base -> libcurl[version='>=7.81.0,<8.0a0|>=7.84.0,<8.0a0']
+h5py -> hdf5[version='>=1.12.1,<1.12.2.0a0'] -> libcurl[version='>=7.80.0,<8.0a0|>=7.82.0,<8.0a0']
+tensorflow -> tensorflow-base==2.9.1=eigen_py38h36d2db2_1 -> libcurl[version='>=7.81.0,<8.0a0|>=7.84.0,<8.0a0']
+arrow-cpp -> aws-sdk-cpp[version='>=1.8.185,<1.8.186.0a0'] -> libcurl[version='>=7.71.1,<8.0a0|>=7.77.0,<8.0a0']
+hdf5 -> libcurl[version='>=7.80.0,<8.0a0|>=7.82.0,<8.0a0']
+aws-sdk-cpp -> libcurl[version='>=7.71.1,<8.0a0|>=7.77.0,<8.0a0']
+
+Package charset-normalizer conflicts for:
+spacy -> requests[version='>=2.13.0,<3.0.0'] -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+tweepy -> requests[version='>=2.27.0,<3'] -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+google-auth -> aiohttp[version='>=3.6.2,<4.0.0dev'] -> charset-normalizer[version='>=2,<3|>=2.0,<3.0|>=2.0.0,<3|>=2.0.0,<2.1.0']
+huggingface_hub -> requests -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+smart_open -> requests -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+plotly -> requests -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+nltk -> requests -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+requests-oauthlib -> requests[version='>=2.0.0'] -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+jupyterlab_server -> requests -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+streamlit -> requests[version='>=2.4'] -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+torchvision -> requests -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+bokeh -> requests[version='>=1.2.3'] -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+datasets -> aiohttp -> charset-normalizer[version='>=2,<3|>=2.0,<3.0|>=2.0.0,<3|>=2.0.0,<2.1.0']
+requests -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+transformers -> requests -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+responses -> requests[version='>=2.0'] -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+aiohttp -> charset-normalizer[version='>=2.0,<3.0']
+tensorboard -> requests[version='>=2.21.0,<3'] -> charset-normalizer[version='>=2,<3|>=2.0.0,<3|>=2.0.0,<2.1.0']
+
+Package tensorboard-plugin-wit conflicts for:
+tensorboard -> tensorboard-plugin-wit[version='>=1.6.0']
+tensorflow-base -> tensorboard=2.9 -> tensorboard-plugin-wit[version='>=1.6.0']
+tensorflow -> tensorboard=2.9 -> tensorboard-plugin-wit[version='>=1.6.0']
+
+Package babel conflicts for:
+jupyterlab_server -> babel
+jupyterlab -> jupyterlab_server[version='>=2.10,<3'] -> babel
+
+Package google-auth-oauthlib conflicts for:
+tensorboard -> google-auth-oauthlib[version='0.4.1|>=0.4.1,<0.5|>=0.4.1']
+tensorflow -> tensorboard=2.9 -> google-auth-oauthlib[version='0.4.1|>=0.4.1,<0.5|>=0.4.1']
+tensorflow-base -> tensorboard=2.9 -> google-auth-oauthlib[version='0.4.1|>=0.4.1,<0.5']
+
+Package opt_einsum conflicts for:
+tensorflow-estimator -> tensorflow-base==2.7.0=cpu_py39h326c378_0 -> opt_einsum[version='>=2.3.2|>=2.3.2,<3.0a0|>=3.1.0,<4.0a0']
+tensorflow-base -> opt_einsum[version='3.3.0.*|>=2.3.2|>=2.3.2,<3.0a0|>=3.1.0,<4.0a0']
+tensorflow -> tensorflow-base==2.9.1=eigen_py38h36d2db2_1 -> opt_einsum[version='3.3.0.*|>=2.3.2|>=3.1.0,<4.0a0|>=2.3.2,<3.0a0']
+
+Package abseil-cpp conflicts for:
+arrow-cpp -> abseil-cpp[version='>=20210324.2,<20210324.3.0a0']
+parquet-cpp -> arrow-cpp[version='>=0.13.0'] -> abseil-cpp[version='>=20210324.2,<20210324.3.0a0']
+tensorflow-base -> grpc-cpp[version='>=1.42.0,<1.43.0a0'] -> abseil-cpp[version='>=20210324.2,<20210324.3.0a0']
+tensorflow-base -> abseil-cpp[version='>=20211102.0,<20211102.1.0a0']
+pyarrow -> arrow-cpp[version='>=3.0.0,<3.0.1.0a0'] -> abseil-cpp[version='>=20210324.2,<20210324.3.0a0']
+arrow-cpp -> grpc-cpp[version='>=1.46.1,<1.47.0a0'] -> abseil-cpp[version='>=20211102.0,<20211102.1.0a0']
+grpc-cpp -> abseil-cpp[version='>=20210324.2,<20210324.3.0a0|>=20211102.0,<20211102.1.0a0']
+tensorflow -> tensorflow-base==2.9.1=eigen_py38h36d2db2_1 -> abseil-cpp[version='>=20211102.0,<20211102.1.0a0']
+
+Package libiconv conflicts for:
+tensorboard -> tensorboard-data-server[version='>=0.6.0,<0.7.0'] -> libiconv[version='>=1.16,<2.0a0']
+libxml2 -> libiconv[version='>=1.15,<2.0a0|>=1.16,<1.17.0a0|>=1.16,<2.0a0']
+torchvision -> ffmpeg[version='>=4.2'] -> libiconv[version='>=1.15,<2.0a0|>=1.16,<2.0a0']
+ffmpeg -> libiconv[version='>=1.15,<2.0a0|>=1.16,<2.0a0']
+gettext -> libxml2[version='>=2.9.10,<2.10.0a0'] -> libiconv[version='>=1.16,<1.17.0a0']
+tensorboard-data-server -> libiconv[version='>=1.16,<2.0a0']
+lame -> libiconv[version='>=1.15,<2.0a0']
+gettext -> libiconv[version='>=1.15,<2.0a0|>=1.16,<2.0a0']
+arrow-cpp -> libboost[version='>=1.73.0,<1.73.1.0a0'] -> libiconv[version='>=1.15,<2.0a0|>=1.16,<2.0a0']
+gnutls -> gettext[version='>=0.19.8.1'] -> libiconv[version='>=1.15,<2.0a0|>=1.16,<2.0a0']
+
+Package regex conflicts for:
+nltk -> regex[version='>=2021.8.3']
+sacremoses -> regex
+spacy -> regex[version='2017.4.5|>=2017.4.0,<2017.12.1|>=2017.4.0,<=2018.6.21|>=2017.4.0,<=2018.7.11|>=2018.01.10|>=2017.4.1,<2017.12.1']
+transformers -> regex!=2019.12.17
+sentence-transformers -> nltk -> regex[version='!=2019.12.17|>=2021.8.3']
+
+Package pyasn1-modules conflicts for:
+google-auth -> pyasn1-modules[version='>=0.2.1']
+tensorboard -> google-auth[version='>=1.6.3,<2'] -> pyasn1-modules[version='>=0.2.1']
+google-auth-oauthlib -> google-auth[version='>=1.0.0'] -> pyasn1-modules[version='>=0.2.1']
+
+Package sacremoses conflicts for:
+transformers -> sacremoses
+sentence-transformers -> transformers[version='>=4.6.0,<5.0.0'] -> sacremoses
+
+Package ssl_match_hostname conflicts for:
+jupyterlab -> tornado[version='!=6.0.0,!=6.0.1,!=6.0.2'] -> ssl_match_hostname
+matplotlib -> tornado -> ssl_match_hostname
+matplotlib-base -> tornado -> ssl_match_hostname
+tornado -> ssl_match_hostname
+notebook -> tornado[version='>=4.1,<7'] -> ssl_match_hostname
+bokeh -> tornado[version='>=4.3'] -> ssl_match_hostname
+ipykernel -> tornado[version='>=4.2,<7.0'] -> ssl_match_hostname
+jupyter_client -> tornado[version='>=4.1'] -> ssl_match_hostname
+terminado -> tornado[version='>=4'] -> ssl_match_hostname
+
+Package requests-oauthlib conflicts for:
+nltk -> twython -> requests-oauthlib[version='>=0.4.0']
+google-auth-oauthlib -> requests-oauthlib[version='>=0.7.0']
+tweepy -> requests-oauthlib[version='>=1.2.0,<2']
+tensorboard -> google-auth-oauthlib[version='>=0.4.1,<0.5'] -> requests-oauthlib[version='>=0.7.0']
+
+Package libsodium conflicts for:
+jupyter_client -> pyzmq[version='>=13'] -> libsodium[version='>=1.0.16,<1.0.17.0a0|>=1.0.18,<1.0.19.0a0']
+zeromq -> libsodium[version='>=1.0.16,<1.0.17.0a0|>=1.0.18,<1.0.19.0a0']
+pyzmq -> libsodium[version='>=1.0.16,<1.0.17.0a0|>=1.0.18,<1.0.19.0a0']
+notebook -> pyzmq[version='>=17'] -> libsodium[version='>=1.0.16,<1.0.17.0a0|>=1.0.18,<1.0.19.0a0']
+nbclassic -> pyzmq[version='>=17'] -> libsodium[version='>=1.0.16,<1.0.17.0a0|>=1.0.18,<1.0.19.0a0']
+jupyter_server -> pyzmq[version='>=17'] -> libsodium[version='>=1.0.16,<1.0.17.0a0|>=1.0.18,<1.0.19.0a0']
+ipykernel -> pyzmq[version='>=17'] -> libsodium[version='>=1.0.16,<1.0.17.0a0|>=1.0.18,<1.0.19.0a0']
+
+Package libunistring conflicts for:
+ffmpeg -> gnutls[version='>=3.6.5,<3.7.0a0'] -> libunistring[version='>=0,<1.0a0']
+gnutls -> libunistring[version='>=0,<1.0a0']
+libidn2 -> libunistring[version='>=0,<1.0a0']
+
+Package rsa conflicts for:
+google-auth -> rsa[version='>=3.1.4,<4.1|>=3.1.4,<5']
+tensorboard -> google-auth[version='>=1.6.3,<2'] -> rsa[version='>=3.1.4,<4.1|>=3.1.4,<5']
+google-auth-oauthlib -> google-auth[version='>=1.0.0'] -> rsa[version='>=3.1.4,<4.1|>=3.1.4,<5']
+
+Package tokenizers conflicts for:
+transformers -> tokenizers[version='>=0.10.1,<0.11|>=0.11.1,!=0.11.3,<0.13|>=0.11.1,!=0.11.3|>=0.11.1,!=0.11.3,<0.14']
+sentence-transformers -> transformers[version='>=4.6.0,<5.0.0'] -> tokenizers[version='>=0.10.1,<0.11|>=0.11.1,!=0.11.3,<0.13|>=0.11.1,!=0.11.3|>=0.11.1,!=0.11.3,<0.14']
+sentence-transformers -> tokenizers[version='>=0.10.3']
+
+Package tinycss2 conflicts for:
+nbconvert -> tinycss2
+notebook -> nbconvert[version='>=5'] -> tinycss2
+nbclassic -> nbconvert[version='>=5'] -> tinycss2
+jupyter_server -> nbconvert[version='>=6.4.4'] -> tinycss2
+
+Package libblas conflicts for:
+libfaiss-avx2 -> liblapack[version='>=3.9.0,<4.0a0'] -> libblas==3.9.0=12_osx64_mkl
+liblapack -> libblas==3.9.0=12_osx64_mkl
+faiss -> libblas[version='>=3.9.0,<4.0a0']
+libfaiss-avx2 -> libblas[version='>=3.9.0,<4.0a0']
+libfaiss -> liblapack[version='>=3.9.0,<4.0a0'] -> libblas==3.9.0=12_osx64_mkl
+faiss -> liblapack[version='>=3.9.0,<4.0a0'] -> libblas==3.9.0=12_osx64_mkl
+libfaiss -> libblas[version='>=3.9.0,<4.0a0']
+
+Package zstd conflicts for:
+mysql-connector-python -> mysql-libs[version='>=8.0.29,<8.1.0a0'] -> zstd[version='>=1.5.2,<1.6.0a0']
+pillow -> libtiff[version='>=4.1.0,<5.0a0'] -> zstd[version='>=1.3.7,<1.3.8.0a0|>=1.4.4,<1.5.0a0|>=1.4|>=1.4.5,<1.5.0a0|>=1.5.2,<1.6.0a0']
+arrow-cpp -> zstd[version='>=1.3.3,<1.3.4.0a0|>=1.3.7,<1.3.8.0a0|>=1.4.5,<1.5.0a0|>=1.4.9,<1.5.0a0|>=1.5.2,<1.6.0a0']
+pyarrow -> arrow-cpp[version='>=8.0.0,<8.0.1.0a0'] -> zstd[version='>=1.3.3,<1.3.4.0a0|>=1.3.7,<1.3.8.0a0|>=1.4.5,<1.5.0a0|>=1.4.9,<1.5.0a0|>=1.5.2,<1.6.0a0']
+orc -> zstd[version='>=1.4.5,<1.5.0a0|>=1.4.9,<1.5.0a0|>=1.5.0,<1.6.0a0|>=1.5.2,<1.6.0a0']
+mysql-libs -> zstd[version='>=1.5.2,<1.6.0a0']
+libtiff -> zstd[version='>=1.3.7,<1.3.8.0a0|>=1.4.4,<1.5.0a0|>=1.4|>=1.4.5,<1.5.0a0|>=1.5.2,<1.6.0a0']
+lcms2 -> libtiff[version='>=4.1.0,<5.0a0'] -> zstd[version='>=1.3.7,<1.3.8.0a0|>=1.4.4,<1.5.0a0|>=1.4|>=1.4.5,<1.5.0a0|>=1.5.2,<1.6.0a0']
+parquet-cpp -> arrow-cpp[version='>=0.13.0'] -> zstd[version='>=1.3.3,<1.3.4.0a0|>=1.3.7,<1.3.8.0a0|>=1.4.5,<1.5.0a0|>=1.4.9,<1.5.0a0|>=1.5.2,<1.6.0a0']
+openjpeg -> libtiff[version='>=4.2.0,<5.0a0'] -> zstd[version='>=1.3.7,<1.3.8.0a0|>=1.4.4,<1.5.0a0|>=1.4|>=1.4.5,<1.5.0a0|>=1.5.2,<1.6.0a0']
+arrow-cpp -> orc[version='>=1.7.2,<1.7.3.0a0'] -> zstd[version='>=1.5.0,<1.6.0a0']
+
+Package grpc-cpp conflicts for:
+pyarrow -> arrow-cpp[version='>=8.0.0,<8.0.1.0a0'] -> grpc-cpp[version='>=1.42.0,<1.43.0a0|>=1.46.1,<1.47.0a0']
+arrow-cpp -> grpc-cpp[version='>=1.26.0,<1.27.0a0|>=1.42.0,<1.43.0a0|>=1.46.1,<1.47.0a0']
+pyarrow -> grpc-cpp[version='>=1.26.0,<1.27.0a0']
+tensorflow-base -> grpc-cpp[version='>=1.42.0,<1.43.0a0|>=1.46.1,<1.47.0a0']
+tensorflow-estimator -> tensorflow-base==2.7.0=cpu_py39h326c378_0 -> grpc-cpp[version='>=1.42.0,<1.43.0a0']
+tensorflow -> tensorflow-base==2.9.1=eigen_py38h36d2db2_1 -> grpc-cpp[version='>=1.42.0,<1.43.0a0|>=1.46.1,<1.47.0a0']
+parquet-cpp -> arrow-cpp[version='>=0.13.0'] -> grpc-cpp[version='>=1.26.0,<1.27.0a0|>=1.42.0,<1.43.0a0|>=1.46.1,<1.47.0a0']
+
+Package brotli-bin conflicts for:
+arrow-cpp -> brotli[version='>=1.0.9,<2.0a0'] -> brotli-bin==1.0.9[build='h5eb16cf_7|hca72f7f_7']
+fonttools -> brotli -> brotli-bin==1.0.9[build='h5eb16cf_7|hca72f7f_7']
+pyarrow -> brotli -> brotli-bin==1.0.9[build='h5eb16cf_7|hca72f7f_7']
+brotli -> brotli-bin==1.0.9[build='h5eb16cf_7|hca72f7f_7']
+
+Package async_generator conflicts for:
+nbconvert -> nbclient[version='>=0.5.0'] -> async_generator
+anyio -> async_generator
+jupyter_server -> anyio[version='>=2.0.2'] -> async_generator
+nbclient -> async_generator
+
+Package notebook-shim conflicts for:
+notebook -> nbclassic[version='>=0.4.7'] -> notebook-shim[version='>=0.1.0']
+jupyterlab -> nbclassic -> notebook-shim[version='>=0.1.0']
+nbclassic -> notebook-shim[version='>=0.1.0']
+
+Package brotli conflicts for:
+pyarrow -> arrow-cpp[version='>=8.0.0,<8.0.1.0a0'] -> brotli[version='>=1.0.9,<2.0a0']
+parquet-cpp -> arrow-cpp[version='>=0.13.0'] -> brotli[version='>=1.0.9,<2.0a0']
+pyarrow -> brotli
+arrow-cpp -> brotli[version='>=1.0.9,<2.0a0']
+matplotlib-base -> fonttools[version='>=4.22.0'] -> brotli[version='>=1.0.1']
+fonttools -> brotli[version='>=1.0.1']
+
+Package click conflicts for:
+typer -> click[version='>=7.1.1,<7.2.0|>=7.1.1,<9|>=7.1.1,<9.0.0']
+spacy -> click[version='<8.1.0']
+google-auth-oauthlib -> click[version='>=6.0.0']
+sacremoses -> click
+streamlit -> click[version='>=7.0|>=7.0,<8.1']
+tensorboard -> google-auth-oauthlib[version='>=0.4.1,<0.5'] -> click[version='>=6.0.0']
+transformers -> sacremoses -> click
+attrs -> hypothesis -> click[version='>=7.0']
+nltk -> click
+spacy -> typer[version='>=0.3.2,<0.5.0'] -> click[version='>=7.1.1,<7.2.0|>=7.1.1,<9|>=7.1.1,<9.0.0']
+pathy -> typer[version='>=0.3.0,<1.0.0'] -> click[version='>=7.1.1,<7.2.0|>=7.1.1,<9|>=7.1.1,<9.0.0']
+sentence-transformers -> nltk -> click
+
+Package libnghttp2 conflicts for:
+libcurl -> libnghttp2[version='>=1.41.0,<2.0a0|>=1.43.0,<2.0a0|>=1.46.0,<2.0a0']
+hdf5 -> libcurl[version='>=7.80.0,<8.0a0'] -> libnghttp2[version='>=1.43.0,<2.0a0|>=1.46.0,<2.0a0']
+tensorflow-base -> libcurl[version='>=7.84.0,<8.0a0'] -> libnghttp2[version='>=1.43.0,<2.0a0|>=1.46.0,<2.0a0']
+aws-sdk-cpp -> libcurl[version='>=7.77.0,<8.0a0'] -> libnghttp2[version='>=1.41.0,<2.0a0|>=1.43.0,<2.0a0|>=1.46.0,<2.0a0']
+
+Package libwebp-base conflicts for:
+libtiff -> libwebp-base
+openjpeg -> libtiff[version='>=4.2.0,<5.0a0'] -> libwebp-base
+pillow -> libtiff[version='>=4.1.0,<5.0a0'] -> libwebp-base=1.2.4
+lcms2 -> libtiff[version='>=4.1.0,<5.0a0'] -> libwebp-base
+
+Package murmurhash conflicts for:
+thinc -> preshed[version='>=3.0.2,<3.1.0'] -> murmurhash[version='<1.1.0,>=0.28.0']
+spacy -> murmurhash[version='>=0.26,<0.27|>=0.28,<0.29|>=0.28,<1.1.0|>=0.28.0,<1.1.0']
+thinc -> murmurhash[version='>=0.28,<0.29|>=0.28,<0.29.0|>=0.28,<0.30|>=0.28,<1.1.0|>=0.28.0,<1.1.0|>=1.0.2,<1.1.0']
+spacy -> preshed[version='>=3.0.2,<3.1.0'] -> murmurhash[version='<1.1.0,>=0.28.0|>=1.0.2,<1.1.0|>=0.28,<0.29.0|>=0.28,<0.30']
+preshed -> murmurhash[version='<1.1.0,>=0.28.0|>=0.28.0,<1.1.0']
+
+Package termcolor conflicts for:
+tensorflow-base -> termcolor[version='>=1.1.0|>=1.1.0,<2.0a0']
+tensorflow-estimator -> termcolor[version='>=1.1.0']
+tensorflow -> tensorflow-base==2.9.1=eigen_py38h36d2db2_1 -> termcolor[version='>=1.1.0|>=1.1.0,<2.0a0']
+thinc -> termcolor[version='>=1.1.0,<1.2.0']
+spacy -> thinc[version='>=6.10.3,<6.11.0'] -> termcolor[version='>=1.1.0,<1.2.0']
+tensorflow-estimator -> tensorflow-base[version='>=1.15.0,<1.16.0a0'] -> termcolor[version='>=1.1.0,<2.0a0']
+
+Package immutables conflicts for:
+thinc -> contextvars[version='>=2.4,<3'] -> immutables[version='>=0.9']
+sniffio -> contextvars[version='>=2.1'] -> immutables[version='>=0.9']
+
+Package frozenlist conflicts for:
+google-auth -> aiohttp[version='>=3.6.2,<4.0.0dev'] -> frozenlist[version='>=1.1.1']
+aiohttp -> frozenlist[version='>=1.1.1']
+aiohttp -> aiosignal[version='>=1.1.2'] -> frozenlist[version='>=1.1.0']
+datasets -> aiohttp -> frozenlist[version='>=1.1.1']
+aiosignal -> frozenlist[version='>=1.1.0']
+
+Package lz4-c conflicts for:
+libtiff -> zstd[version='>=1.5.2,<1.6.0a0'] -> lz4-c[version='>=1.9.2,<1.10.0a0|>=1.9.3,<1.10.0a0|>=1.9.3,<1.9.4.0a0']
+zstd -> lz4-c[version='>=1.9.2,<1.10.0a0|>=1.9.3,<1.10.0a0|>=1.9.3,<1.9.4.0a0']
+pyarrow -> arrow-cpp[version='>=8.0.0,<8.0.1.0a0'] -> lz4-c[version='>=1.8.1.2,<1.9.0a0|>=1.9.3,<1.10.0a0|>=1.9.3,<1.9.4.0a0']
+arrow-cpp -> orc[version='>=1.6.5,<1.6.6.0a0'] -> lz4-c[version='>=1.9.2,<1.10.0a0']
+orc -> lz4-c[version='>=1.8.1.2,<1.9.0a0|>=1.9.2,<1.10.0a0|>=1.9.3,<1.10.0a0|>=1.9.3,<1.9.4.0a0']
+parquet-cpp -> arrow-cpp[version='>=0.13.0'] -> lz4-c[version='>=1.8.1.2,<1.9.0a0|>=1.9.3,<1.10.0a0|>=1.9.3,<1.9.4.0a0']
+arrow-cpp -> lz4-c[version='>=1.8.1.2,<1.9.0a0|>=1.9.3,<1.10.0a0|>=1.9.3,<1.9.4.0a0']
+mysql-libs -> zstd[version='>=1.5.2,<1.6.0a0'] -> lz4-c[version='>=1.9.3,<1.10.0a0|>=1.9.3,<1.9.4.0a0']
+
+Package urllib3 conflicts for:
+google-auth -> requests[version='>=2.20.0,<3.0.0dev'] -> urllib3[version='>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+torchvision -> requests -> urllib3[version='>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+nltk -> requests -> urllib3[version='>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+spacy -> requests[version='>=2.13.0,<3.0.0'] -> urllib3[version='>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+streamlit -> requests[version='>=2.4'] -> urllib3[version='>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+smart_open -> requests -> urllib3[version='>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+bokeh -> requests[version='>=1.2.3'] -> urllib3[version='>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+datasets -> requests[version='>=2.19.0'] -> urllib3[version='>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27|>=1.25.10']
+requests -> urllib3[version='>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+transformers -> requests -> urllib3[version='>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+tensorboard -> requests[version='>=2.21.0,<3'] -> urllib3[version='>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+plotly -> requests -> urllib3[version='>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+requests-oauthlib -> requests[version='>=2.0.0'] -> urllib3[version='>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+responses -> urllib3[version='>=1.25.10']
+jupyterlab_server -> requests -> urllib3[version='>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+tweepy -> requests[version='>=2.27.0,<3'] -> urllib3[version='>=1.21.1,<1.27']
+responses -> requests[version='>=2.0'] -> urllib3[version='>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+huggingface_hub -> requests -> urllib3[version='>=1.21.1,<1.23|>=1.21.1,<1.24|>=1.21.1,<1.25|>=1.21.1,<1.26,!=1.25.0,!=1.25.1|>=1.21.1,<1.27']
+
+Package boto conflicts for:
+smart_open -> boto[version='>=2.32']
+pathy -> smart_open[version='>=2.2.0,<4.0.0'] -> boto[version='>=2.32']
+gensim -> smart_open[version='>=1.8.1'] -> boto[version='>=2.32']
+
+Package coverage conflicts for:
+tensorflow-base -> grpcio -> coverage
+grpcio -> coverage
+tensorflow-estimator -> grpcio[version='>=1.8.6'] -> coverage
+tensorboard -> grpcio[version='>=1.24.3'] -> coverage
+attrs -> hypothesis -> coverage
+
+Package re2 conflicts for:
+pyarrow -> arrow-cpp[version='>=8.0.0,<8.0.1.0a0'] -> re2[version='>=2021.11.1,<2021.11.2.0a0|>=2022.4.1,<2022.4.2.0a0']
+arrow-cpp -> grpc-cpp -> re2[version='>=2020.11.1,<2020.11.2.0a0']
+arrow-cpp -> re2[version='>=2021.11.1,<2021.11.2.0a0|>=2022.4.1,<2022.4.2.0a0']
+parquet-cpp -> arrow-cpp[version='>=0.13.0'] -> re2[version='>=2021.11.1,<2021.11.2.0a0|>=2022.4.1,<2022.4.2.0a0']
+tensorflow-base -> grpc-cpp[version='>=1.46.1,<1.47.0a0'] -> re2[version='>=2021.11.1,<2021.11.2.0a0|>=2022.4.1,<2022.4.2.0a0']
+grpc-cpp -> re2[version='>=2020.11.1,<2020.11.2.0a0|>=2022.4.1,<2022.4.2.0a0|>=2021.11.1,<2021.11.2.0a0']
+
+Package twisted conflicts for:
+notebook -> prometheus_client -> twisted
+jupyter_server -> prometheus_client -> twisted
+prometheus_client -> twisted
+nbclassic -> prometheus_client -> twisted
+
+Package websocket-client conflicts for:
+notebook-shim -> jupyter_server[version='>=1.8,<3'] -> websocket-client
+nbclassic -> jupyter_server[version='>=1.17.0'] -> websocket-client
+jupyter_server -> websocket-client
+jupyterlab_server -> jupyter_server[version='>=1.8,<2'] -> websocket-client
+jupyterlab -> jupyter_server[version='>=1.16,<2'] -> websocket-client
+
+Package appnope conflicts for:
+pydeck -> ipykernel[version='>=5.1.2'] -> appnope
+notebook -> ipykernel -> appnope
+jupyterlab -> ipython -> appnope
+ipywidgets -> ipykernel[version='>=4.5.1'] -> appnope
+nbclassic -> ipykernel -> appnope
+ipython -> appnope
+ipykernel -> appnope
+
+Package pandoc conflicts for:
+jupyter_server -> nbconvert[version='>=6.4.4'] -> pandoc[version='>=1.12.1|>=1.12.1,<2.0.0']
+notebook -> nbconvert[version='>=5'] -> pandoc[version='>=1.12.1|>=1.12.1,<2.0.0']
+nbclassic -> nbconvert[version='>=5'] -> pandoc[version='>=1.12.1|>=1.12.1,<2.0.0']
+nbconvert -> pandoc[version='>=1.12.1|>=1.12.1,<2.0.0']
+
+Package pkgutil-resolve-name conflicts for:
+jupyterlab_server -> jsonschema[version='>=3.0.1'] -> pkgutil-resolve-name[version='>=1.3.10']
+jsonschema -> pkgutil-resolve-name[version='>=1.3.10']
+nbformat -> jsonschema[version='>=2.6'] -> pkgutil-resolve-name[version='>=1.3.10']
+altair -> jsonschema[version='>=3.0'] -> pkgutil-resolve-name[version='>=1.3.10']
+
+Package backports.functools_lru_cache conflicts for:
+beautifulsoup4 -> soupsieve[version='>=1.2'] -> backports.functools_lru_cache
+nltk -> matplotlib -> backports.functools_lru_cache
+prompt-toolkit -> wcwidth -> backports.functools_lru_cache
+soupsieve -> backports.functools_lru_cache
+seaborn -> matplotlib[version='>=2.2'] -> backports.functools_lru_cache
+matplotlib -> backports.functools_lru_cache
+bokeh -> matplotlib -> backports.functools_lru_cache
+wcwidth -> backports.functools_lru_cache
+
+Package ipywidgets conflicts for:
+pydeck -> ipywidgets[version='>=7.0.0']
+streamlit -> pydeck[version='>=0.1.dev5'] -> ipywidgets[version='>=7.0.0']
+
+Package multidict conflicts for:
+datasets -> aiohttp -> multidict[version='>=2.1.4|>=3.0.0|>=4.0,<5.0|>=4.5,<5.0|>=4.5,<7.0']
+aiohttp -> yarl[version='>=1.0,<2.0'] -> multidict[version='>=2.0|>=4.0']
+google-auth -> aiohttp[version='>=3.6.2,<4.0.0dev'] -> multidict[version='>=2.1.4|>=3.0.0|>=4.0,<5.0|>=4.5,<5.0|>=4.5,<7.0']
+aiohttp -> multidict[version='>=2.1.4|>=3.0.0|>=4.0,<5.0|>=4.5,<5.0|>=4.5,<7.0']
+yarl -> multidict[version='>=2.0|>=4.0']
+
+Package jbig conflicts for:
+pillow -> libtiff[version='>=4.1.0,<5.0a0'] -> jbig
+lcms2 -> libtiff[version='>=4.1.0,<5.0a0'] -> jbig
+openjpeg -> libtiff[version='>=4.2.0,<5.0a0'] -> jbig
+libtiff -> jbig
+
+Package pyu2f conflicts for:
+google-auth-oauthlib -> google-auth[version='>=1.0.0'] -> pyu2f[version='>=0.1.5']
+tensorboard -> google-auth[version='>=1.6.3,<2'] -> pyu2f[version='>=0.1.5']
+google-auth -> pyu2f[version='>=0.1.5']
+
+Package backcall conflicts for:
+ipywidgets -> ipython[version='>=4.0.0'] -> backcall
+ipython -> backcall
+jupyterlab -> ipython -> backcall
+ipykernel -> ipython[version='>=7.23.1'] -> backcall
+
+Package mysql-common conflicts for:
+mysql-connector-python -> mysql-libs[version='>=8.0.29,<8.1.0a0'] -> mysql-common==8.0.31=h7ebae80_0
+mysql-libs -> mysql-common==8.0.31=h7ebae80_0
+
+Package aws-c-event-stream conflicts for:
+aws-sdk-cpp -> aws-c-event-stream[version='>=0.1.6,<0.1.7.0a0|>=0.2.7,<0.2.8.0a0']
+arrow-cpp -> aws-sdk-cpp[version='>=1.8.185,<1.8.186.0a0'] -> aws-c-event-stream[version='>=0.1.6,<0.1.7.0a0|>=0.2.7,<0.2.8.0a0']
+
+Package pyrsistent conflicts for:
+jsonschema -> pyrsistent[version='!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0|>=0.14.0,!=0.17.0,!=0.17.1,!=0.17.2|>=0.14.0']
+spacy -> jsonschema[version='>=2.6.0,<3.1.0'] -> pyrsistent[version='>=0.14.0']
+altair -> jsonschema[version='>=3.0'] -> pyrsistent[version='!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0|>=0.14.0,!=0.17.0,!=0.17.1,!=0.17.2|>=0.14.0']
+jupyterlab_server -> jsonschema[version='>=3.0.1'] -> pyrsistent[version='!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0|>=0.14.0,!=0.17.0,!=0.17.1,!=0.17.2|>=0.14.0']
+nbformat -> jsonschema[version='>=2.6'] -> pyrsistent[version='!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0|>=0.14.0,!=0.17.0,!=0.17.1,!=0.17.2|>=0.14.0']
+
+Package blinker conflicts for:
+tweepy -> oauthlib[version='>=3.2.0,<4'] -> blinker[version='>=1.4.0']
+oauthlib -> blinker[version='>=1.4.0']
+requests-oauthlib -> oauthlib[version='>=3.0.0'] -> blinker[version='>=1.4.0']
+streamlit -> blinker[version='>=1.0.0']
+
+Package pysocks conflicts for:
+responses -> urllib3[version='>=1.25.10'] -> pysocks[version='>=1.5.6,<2.0,!=1.5.7']
+urllib3 -> pysocks[version='>=1.5.6,<2.0,!=1.5.7']
+requests -> urllib3[version='>=1.21.1,<1.27'] -> pysocks[version='>=1.5.6,<2.0,!=1.5.7']
+
+Package libwebp conflicts for:
+pillow -> libwebp[version='>=0.3.0|>=1.2.0,<1.3.0a0']
+bokeh -> pillow[version='>=7.1.0'] -> libwebp[version='>=0.3.0|>=1.2.0,<1.3.0a0']
+torchvision -> pillow[version='>=5.3.0,!=8.3.*'] -> libwebp[version='>=0.3.0|>=1.2.0,<1.3.0a0']
+matplotlib-base -> pillow[version='>=6.2.0'] -> libwebp[version='>=0.3.0|>=1.2.0,<1.3.0a0']
+streamlit -> pillow[version='>=6.2.0'] -> libwebp[version='>=0.3.0|>=1.2.0,<1.3.0a0']
+wordcloud -> pillow -> libwebp[version='>=0.3.0|>=1.2.0,<1.3.0a0']
+
+Package yarl conflicts for:
+aiohttp -> yarl[version='>=0.11|>=1.0,<1.6.0|>=1.0,<2|>=1.0,<2.0']
+google-auth -> aiohttp[version='>=3.6.2,<4.0.0dev'] -> yarl[version='>=0.11|>=1.0,<1.6.0|>=1.0,<2|>=1.0,<2.0']
+datasets -> aiohttp -> yarl[version='>=0.11|>=1.0,<1.6.0|>=1.0,<2|>=1.0,<2.0']
+smart_open -> google-cloud-storage -> yarl[version='<1.6.0,>=1.0|>=1.0,<1.6.0']
+
+Package nbclient conflicts for:
+nbconvert -> nbclient[version='>=0.5.0|>=0.5.0,<0.6.0']
+notebook -> nbconvert[version='>=5'] -> nbclient[version='>=0.5.0|>=0.5.0,<0.6.0']
+nbclassic -> nbconvert[version='>=5'] -> nbclient[version='>=0.5.0|>=0.5.0,<0.6.0']
+jupyter_server -> nbconvert[version='>=6.4.4'] -> nbclient[version='>=0.5.0|>=0.5.0,<0.6.0']
+
+Package pyyaml conflicts for:
+datasets -> pyyaml[version='>=5.1']
+streamlit -> watchdog -> pyyaml[version='>=3.10']
+transformers -> pyyaml[version='>=5.1']
+bokeh -> pyyaml[version='>=3.10']
+keras -> pyyaml
+tensorflow-base -> keras=2.9 -> pyyaml
+datasets -> huggingface_hub[version='>=0.2.0,<1.0.0'] -> pyyaml
+sentence-transformers -> huggingface_hub[version='>=0.8.1'] -> pyyaml[version='>=5.1']
+huggingface_hub -> pyyaml[version='>=5.1']
+watchdog -> pyyaml[version='>=3.10']
+
+Package numba conflicts for:
+umap-learn -> pynndescent[version='>=0.5'] -> numba[version='>=0.46']
+umap-learn -> numba[version='>=0.51.2']
+pynndescent -> numba[version='0.46|>=0.46|>=0.51.2|>=0.40']
+
+Package astunparse conflicts for:
+tensorflow-estimator -> tensorflow-base==2.7.0=cpu_py39h326c378_0 -> astunparse[version='>=1.6.0']
+tensorflow-base -> astunparse[version='>=1.6.0|>=1.6.3']
+tensorflow -> tensorflow-base==2.9.1=eigen_py38h36d2db2_1 -> astunparse[version='>=1.6.0|>=1.6.3']
+
+Package cython-blis conflicts for:
+spacy -> thinc[version='>=8.1.0,<8.2.0'] -> cython-blis[version='>=0.4.0,<0.5.0|>=0.7.8,<0.8.0']
+thinc -> cython-blis[version='>=0.4.0,<0.5.0|>=0.4.0,<0.8.0|>=0.7.8,<0.8.0']
+spacy -> cython-blis[version='>=0.4.0,<0.8.0']
+
+Package aiosignal conflicts for:
+aiohttp -> aiosignal[version='>=1.1.2']
+datasets -> aiohttp -> aiosignal[version='>=1.1.2']
+google-auth -> aiohttp[version='>=3.6.2,<4.0.0dev'] -> aiosignal[version='>=1.1.2']
+
+Package send2trash conflicts for:
+notebook-shim -> jupyter_server[version='>=1.8,<3'] -> send2trash
+jupyterlab -> jupyter_server[version='>=1.16,<2'] -> send2trash[version='>=1.5.0|>=1.8.0']
+jupyterlab_server -> jupyter_server[version='>=1.8,<2'] -> send2trash[version='>=1.5.0|>=1.8.0']
+nbclassic -> send2trash[version='>=1.8.0']
+widgetsnbextension -> notebook[version='>=4.4.1'] -> send2trash[version='>=1.5.0|>=1.8.0']
+nbclassic -> jupyter_server[version='>=1.17.0'] -> send2trash[version='>=1.5.0']
+jupyter_server -> send2trash
+notebook -> send2trash[version='>=1.5.0|>=1.8.0']
+
+Package tensorboard conflicts for:
+tensorflow-base -> tensorboard[version='2.9.*|>=2.6,<2.7']
+keras -> tensorflow -> tensorboard[version='1.15.*|2.9.*|>=2.0.0|>=2.0.0,<2.1.0a0|>=1.14.0,<1.15.0|>=1.13.0,<1.14.0|>=1.12.0,<1.13.0|>=1.11.0,<1.12.0|>=1.10.0,<1.11.0|>=1.9.0,<1.10.0|>=1.8.0,<1.9.0']
+tensorflow-estimator -> tensorflow-base==2.7.0=cpu_py39h326c378_0 -> tensorboard[version='>=2.6,<2.7']
+tensorflow -> tensorboard[version='1.15.*|2.9.*|>=2.0.0|>=2.0.0,<2.1.0a0|>=1.14.0,<1.15.0|>=1.13.0,<1.14.0|>=1.12.0,<1.13.0|>=1.11.0,<1.12.0|>=1.10.0,<1.11.0|>=1.9.0,<1.10.0|>=1.8.0,<1.9.0']
+tensorflow -> tensorflow-base==2.7.0=cpu_py39h326c378_0 -> tensorboard[version='>=2.6,<2.7']
+
+Package zeromq conflicts for:
+ipykernel -> pyzmq[version='>=17'] -> zeromq[version='4.2.*|>=4.2.3,<4.3|>=4.2.5,<4.2.6.0a0|>=4.3.1,<4.4.0a0|>=4.3.2,<4.4.0a0|>=4.3.3,<4.4.0a0|>=4.3.4,<4.4.0a0']
+pyzmq -> zeromq[version='4.2.*|>=4.2.3,<4.3|>=4.2.5,<4.2.6.0a0|>=4.3.1,<4.4.0a0|>=4.3.2,<4.4.0a0|>=4.3.3,<4.4.0a0|>=4.3.4,<4.4.0a0']
+notebook -> pyzmq[version='>=17'] -> zeromq[version='4.2.*|>=4.2.3,<4.3|>=4.2.5,<4.2.6.0a0|>=4.3.1,<4.4.0a0|>=4.3.2,<4.4.0a0|>=4.3.3,<4.4.0a0|>=4.3.4,<4.4.0a0']
+jupyter_client -> pyzmq[version='>=23.0'] -> zeromq[version='4.2.*|>=4.2.3,<4.3|>=4.2.5,<4.2.6.0a0|>=4.3.1,<4.4.0a0|>=4.3.2,<4.4.0a0|>=4.3.3,<4.4.0a0|>=4.3.4,<4.4.0a0']
+nbclassic -> pyzmq[version='>=17'] -> zeromq[version='>=4.2.3,<4.3|>=4.2.5,<4.2.6.0a0|>=4.3.1,<4.4.0a0|>=4.3.2,<4.4.0a0|>=4.3.3,<4.4.0a0|>=4.3.4,<4.4.0a0']
+jupyter_server -> pyzmq[version='>=17'] -> zeromq[version='>=4.2.3,<4.3|>=4.2.5,<4.2.6.0a0|>=4.3.1,<4.4.0a0|>=4.3.2,<4.4.0a0|>=4.3.3,<4.4.0a0|>=4.3.4,<4.4.0a0']
+
+Package soupsieve conflicts for:
+beautifulsoup4 -> soupsieve[version='>=1.2']
+nbconvert -> beautifulsoup4 -> soupsieve[version='>=1.2']
+
+Package icu conflicts for:
+gettext -> libxml2[version='>=2.9.10,<2.10.0a0'] -> icu[version='>=58.2,<59.0a0|>=69.1,<70.0a0']
+tensorflow-estimator -> tensorflow-base==2.7.0=cpu_py39h326c378_0 -> icu[version='>=69.1,<70.0a0']
+tensorflow -> tensorflow-base==2.9.1=eigen_py38h36d2db2_1 -> icu[version='>=58.2,<59.0a0|>=69.1,<70.0a0']
+arrow-cpp -> libboost[version='>=1.73.0,<1.73.1.0a0'] -> icu[version='>=58.2,<59.0a0']
+parquet-cpp -> libboost[version='>=1.65.1,<1.65.2.0a0'] -> icu[version='>=58.2,<59.0a0']
+tensorflow-base -> icu[version='>=58.2,<59.0a0|>=69.1,<70.0a0']
+libxml2 -> icu[version='>=58.2,<59.0a0|>=69.1,<70.0a0']
+
+Package python-xxhash conflicts for:
+transformers -> datasets -> python-xxhash
+datasets -> python-xxhash
+
+Package wasabi conflicts for:
+thinc -> wasabi[version='>=0.0.9,<1.1.0|>=0.4.0,<1.1.0|>=0.8.1,<1.1.0']
+spacy -> wasabi[version='>=0.4.0,<1.1.0|>=0.8.1,<1.1.0|>=0.9.1,<1.1.0']
+spacy-loggers -> wasabi[version='>=0.8.1,<1.1.0']
+spacy -> thinc[version='>=7.4.1'] -> wasabi[version='>=0.0.9,<1.1.0']
+
+Package numexpr conflicts for:
+altair -> pandas[version='>=0.18'] -> numexpr[version='>=2.6.8|>=2.7.0|>=2.7.1']
+pandas -> numexpr[version='>=2.6.8|>=2.7.0|>=2.7.1']
+seaborn-base -> pandas[version='>=0.23'] -> numexpr[version='>=2.6.8|>=2.7.0|>=2.7.1']
+datasets -> pandas -> numexpr[version='>=2.6.8|>=2.7.0|>=2.7.1']
+streamlit -> pandas[version='>=0.21.0'] -> numexpr[version='>=2.6.8|>=2.7.0|>=2.7.1']
+seaborn -> pandas[version='>=0.25'] -> numexpr[version='>=2.6.8|>=2.7.0|>=2.7.1']
+bokeh -> pandas -> numexpr[version='>=2.6.8|>=2.7.0|>=2.7.1']
+statsmodels -> pandas[version='>=1.0'] -> numexpr[version='>=2.6.8|>=2.7.0|>=2.7.1']
+pyarrow -> pandas -> numexpr[version='>=2.6.8|>=2.7.0|>=2.7.1']
+
+Package huggingface_hub conflicts for:
+transformers -> huggingface_hub[version='>=0.1.0,<1.0|>=0.1.0,<=0.9.1|>=0.10.0,<1.0']
+sentence-transformers -> transformers[version='>=4.6.0,<5.0.0'] -> huggingface_hub[version='>=0.1.0,<1.0|>=0.1.0,<=0.9.1|>=0.10.0,<1.0']
+datasets -> huggingface_hub[version='<0.1.0|>=0.1.0,<1.0.0|>=0.2.0,<1.0.0']
+sentence-transformers -> huggingface_hub[version='>=0.8.1']
+transformers -> datasets -> huggingface_hub[version='<0.1.0|>=0.1.0,<1.0.0|>=0.2.0,<1.0.0']
+
+Package libtasn1 conflicts for:
+ffmpeg -> gnutls[version='>=3.6.5,<3.7.0a0'] -> libtasn1[version='>=4.16.0,<5.0a0']
+gnutls -> libtasn1[version='>=4.16.0,<5.0a0']
+
+Package python-tzdata conflicts for:
+pytz-deprecation-shim -> python-tzdata
+tzlocal -> pytz-deprecation-shim -> python-tzdata
+
+Package openpyxl conflicts for:
+datasets -> openpyxl
+transformers -> datasets -> openpyxl
+
+Package python-flatbuffers conflicts for:
+tensorflow-base -> python-flatbuffers[version='1.12.*|>=1.12,<3']
+tensorflow -> tensorflow-base==2.9.1=eigen_py38h36d2db2_1 -> python-flatbuffers[version='1.12.*|>=1.12,<3']
+tensorflow-estimator -> tensorflow-base==2.7.0=cpu_py39h326c378_0 -> python-flatbuffers[version='>=1.12,<3']
+
+Package aws-checksums conflicts for:
+aws-sdk-cpp -> aws-c-event-stream[version='>=0.2.7,<0.2.8.0a0'] -> aws-checksums[version='>=0.1.11,<0.1.12.0a0|>=0.1.9,<0.1.10.0a0']
+aws-c-event-stream -> aws-checksums[version='>=0.1.11,<0.1.12.0a0|>=0.1.9,<0.1.10.0a0']
+
+Package gmp conflicts for:
+nettle -> gmp[version='>=6.1.2']
+ffmpeg -> gmp[version='>=6.1.2']
+torchvision -> ffmpeg[version='>=4.2'] -> gmp[version='>=6.1.2']
+gnutls -> gmp[version='>=6.1.2']
+
+Package libxslt conflicts for:
+nbconvert -> lxml -> libxslt[version='>=1.1.28|>=1.1.35,<2.0a0|>=1.1.34,<2.0a0|>=1.1.33,<2.0a0|>=1.1.32,<2.0a0']
+datasets -> lxml -> libxslt[version='>=1.1.28|>=1.1.35,<2.0a0|>=1.1.34,<2.0a0|>=1.1.33,<2.0a0|>=1.1.32,<2.0a0']
+
+Package asttokens conflicts for:
+stack_data -> asttokens
+ipython -> stack_data -> asttokens
+
+Package libev conflicts for:
+libnghttp2 -> libev[version='>=4.11|>=4.33,<4.34.0a0']
+libcurl -> libnghttp2[version='>=1.46.0,<2.0a0'] -> libev[version='>=4.11|>=4.33,<4.34.0a0']
+
+Package xxhash conflicts for:
+python-xxhash -> xxhash[version='>=0.8.0,<0.8.1.0a0']
+datasets -> python-xxhash -> xxhash[version='>=0.8.0,<0.8.1.0a0']
+
+Package psutil conflicts for:
+pydeck -> ipykernel[version='>=5.1.2'] -> psutil
+ipykernel -> psutil
+ipywidgets -> ipykernel[version='>=4.5.1'] -> psutil
+nbclassic -> ipykernel -> psutil
+notebook -> ipykernel -> psutil
+
+Package executing conflicts for:
+stack_data -> executing
+ipython -> stack_data -> executing
+
+Package boto3 conflicts for:
+gensim -> smart_open[version='>=1.8.1'] -> boto3
+pathy -> smart_open[version='>=5.0.0,<6.0.0'] -> boto3
+transformers -> boto3
+smart_open -> boto3
+
+Package absl-py conflicts for:
+tensorflow -> tensorboard=2.9 -> absl-py[version='>=0.1.6|>=0.10.0|>=0.4|>=0.4.0|>=0.7|>=0.7.0|>=0.7.1,<1.0a0']
+tensorflow-base -> absl-py[version='>=0.1.6|>=0.10.0|>=0.4.0|>=0.7.0|>=0.7.1,<1.0a0']
+tensorflow-estimator -> absl-py[version='>=0.1.6|>=0.7.0']
+tensorboard -> absl-py[version='>=0.4|>=0.7']
+tensorflow-estimator -> tensorflow-base==2.7.0=cpu_py39h326c378_0 -> absl-py[version='>=0.4.0|>=0.7.1,<1.0a0']
+tensorflow-base -> tensorboard=2.9 -> absl-py[version='>=0.4']
+
+Package lerc conflicts for:
+lcms2 -> libtiff[version='>=4.1.0,<5.0a0'] -> lerc[version='>=3.0,<4.0a0']
+openjpeg -> libtiff[version='>=4.2.0,<5.0a0'] -> lerc[version='>=3.0,<4.0a0']
+libtiff -> lerc[version='>=3.0,<4.0a0']
+pillow -> libtiff[version='>=4.1.0,<5.0a0'] -> lerc[version='>=3.0,<4.0a0']
+
+Package zope conflicts for:
+attrs -> zope
+aiohttp -> attrs[version='>=17.3.0'] -> zope
+streamlit -> attrs[version='>=16.0.0'] -> zope
+
+Package libllvm10 conflicts for:
+pynndescent -> llvmlite[version='>=0.30'] -> libllvm10[version='>=10.0.1,<10.1.0a0']
+numba -> llvmlite[version='>=0.36.0,<0.37.0a0'] -> libllvm10[version='>=10.0.1,<10.1.0a0']
+llvmlite -> libllvm10[version='>=10.0.1,<10.1.0a0']
+
+Package shellingham conflicts for:
+pathy -> typer[version='>=0.3.0,<1.0.0'] -> shellingham[version='>=1.3.0,<2.0.0']
+typer -> shellingham[version='>=1.3.0,<2.0.0']
+spacy -> typer[version='>=0.3.2,<0.5.0'] -> shellingham[version='>=1.3.0,<2.0.0']
+
+Package pyjwt conflicts for:
+oauthlib -> pyjwt[version='>=1.0.0|>=2.0.0,<3']
+requests-oauthlib -> oauthlib[version='>=3.0.0'] -> pyjwt[version='>=1.0.0|>=2.0.0,<3']
+tweepy -> oauthlib[version='>=3.2.0,<4'] -> pyjwt[version='>=1.0.0|>=2.0.0,<3']
+
+Package keras-preprocessing conflicts for:
+keras -> keras-preprocessing[version='>=1.1.2']
+keras -> keras-base=2.3.1 -> keras-preprocessing[version='1.0.1.*|1.0.2.*|>=1.0.5']
+tensorflow-base -> keras=2.9 -> keras-preprocessing[version='>=1.1.2']
+tensorflow -> tensorflow-base==2.7.0=cpu_py39h326c378_0 -> keras-preprocessing[version='>=1.0.3|>=1.0.5,<2.0a0|>=1.0.5|>=1.1.1']
+tensorflow-base -> keras-preprocessing[version='>=1.0.3|>=1.0.5,<2.0a0|>=1.0.5|>=1.1.1']
+tensorflow-estimator -> tensorflow-base==2.7.0=cpu_py39h326c378_0 -> keras-preprocessing[version='>=1.0.5,<2.0a0|>=1.0.5|>=1.1.1']
+
+Package smart_open conflicts for:
+spacy -> pathy[version='>=0.3.5'] -> smart_open[version='>=2.2.0,<4.0.0|>=5.0.0,<6.0.0']
+gensim -> smart_open[version='>=1.2.1|>=1.8.1']
+nltk -> gensim -> smart_open[version='>=1.2.1|>=1.8.1']
+pathy -> smart_open[version='>=2.2.0,<4.0.0|>=5.0.0,<6.0.0']
+
+Package defusedxml conflicts for:
+nbconvert -> defusedxml
+nbclassic -> nbconvert[version='>=5'] -> defusedxml
+notebook -> nbconvert[version='>=5'] -> defusedxml
+jupyter_server -> nbconvert[version='>=6.4.4'] -> defusedxml
+
+Package async-timeout conflicts for:
+datasets -> aiohttp -> async-timeout[version='<4.0,>=3.0|<5.0,>=4.0.0a3|>=4.0.0a3,<5.0|>=3.0,<4.0|>=1.2,<3.0|>=1.2.0']
+google-auth -> aiohttp[version='>=3.6.2,<4.0.0dev'] -> async-timeout[version='<4.0,>=3.0|<5.0,>=4.0.0a3|>=4.0.0a3,<5.0|>=3.0,<4.0|>=1.2,<3.0|>=1.2.0']
+aiohttp -> async-timeout[version='<4.0,>=3.0|<5.0,>=4.0.0a3|>=4.0.0a3,<5.0|>=3.0,<4.0|>=1.2,<3.0|>=1.2.0']
+
+Package beautifulsoup4 conflicts for:
+soupsieve -> beautifulsoup4
+nbconvert -> beautifulsoup4
+nbclassic -> nbconvert[version='>=5'] -> beautifulsoup4
+jupyter_server -> nbconvert[version='>=6.4.4'] -> beautifulsoup4
+notebook -> nbconvert[version='>=5'] -> beautifulsoup4
+
+Package prometheus_client conflicts for:
+nbclassic -> prometheus_client
+notebook -> prometheus_client
+notebook-shim -> jupyter_server[version='>=1.8,<3'] -> prometheus_client
+jupyterlab_server -> jupyter_server[version='>=1.8,<2'] -> prometheus_client
+widgetsnbextension -> notebook[version='>=4.4.1'] -> prometheus_client
+jupyter_server -> prometheus_client
+jupyterlab -> jupyter_server[version='>=1.16,<2'] -> prometheus_client
+
+Package jupyterlab_pygments conflicts for:
+notebook -> nbconvert[version='>=5'] -> jupyterlab_pygments
+nbconvert -> jupyterlab_pygments
+nbclassic -> nbconvert[version='>=5'] -> jupyterlab_pygments
+jupyter_server -> nbconvert[version='>=6.4.4'] -> jupyterlab_pygments
+
+Package fonttools conflicts for:
+matplotlib -> matplotlib-base[version='>=3.5.3,<3.5.4.0a0'] -> fonttools[version='>=4.22.0']
+seaborn -> matplotlib-base[version='>=3.1,!=3.6.1'] -> fonttools[version='>=4.22.0']
+matplotlib-base -> fonttools[version='>=4.22.0']
+wordcloud -> matplotlib-base -> fonttools[version='>=4.22.0']
+seaborn-base -> matplotlib-base[version='>=2.2'] -> fonttools[version='>=4.22.0']
+
+Package pickleshare conflicts for:
+ipywidgets -> ipython[version='>=4.0.0'] -> pickleshare
+ipython -> pickleshare
+jupyterlab -> ipython -> pickleshare
+ipykernel -> ipython[version='>=7.23.1'] -> pickleshare
+
+Package cached-property conflicts for:
+keras -> h5py -> cached-property
+h5py -> cached-property
+tensorflow-base -> h5py[version='>=3.1.0'] -> cached-property
+
+Package testpath conflicts for:
+jupyter_server -> nbconvert[version='>=6.4.4'] -> testpath
+nbconvert -> testpath
+notebook -> nbconvert[version='>=5'] -> testpath
+nbclassic -> nbconvert[version='>=5'] -> testpath
+
+Package libevent conflicts for:
+arrow-cpp -> libthrift[version='>=0.15.0,<0.16.0a0'] -> libevent[version='>=2.1.10,<2.1.11.0a0|>=2.1.8,<2.2.0a0']
+parquet-cpp -> thrift-cpp[version='>=0.11.0,<0.12.0a0'] -> libevent[version='>=2.1.8,<2.2.0a0']
+libthrift -> libevent[version='>=2.1.10,<2.1.11.0a0|>=2.1.8,<2.2.0a0']
+
+Package filelock conflicts for:
+sentence-transformers -> huggingface_hub[version='>=0.8.1'] -> filelock
+datasets -> huggingface_hub[version='>=0.2.0,<1.0.0'] -> filelock
+huggingface_hub -> filelock
+transformers -> filelock
+
+Package numpydoc conflicts for:
+ipython -> jedi[version='>=0.10,<0.18'] -> numpydoc
+jedi -> numpydoc
+
+Package arrow-cpp conflicts for:
+streamlit -> pyarrow[version='>=4.0'] -> arrow-cpp[version='6.0.1|>=8.0.0,<8.0.1.0a0|>=8.0.0,<9.0a0|>=4.0.1,<4.0.2.0a0|>=4.0.1,<5.0a0',build=py39hf938c1e_8_cpu]
+parquet-cpp -> arrow-cpp[version='>=0.11.0|>=0.13.0|>=0.13.0,<0.14.0a0|>=0.9.0,<0.10.0a0']
+pyarrow -> parquet-cpp=1.5.1 -> arrow-cpp[version='>=0.11.0|>=0.13.0']
+pyarrow -> arrow-cpp[version='6.0.1|>=8.0.0,<8.0.1.0a0|>=8.0.0,<9.0a0|>=4.0.1,<4.0.2.0a0|>=4.0.1,<5.0a0|>=3.0.0,<3.0.1.0a0|>=3.0.0,<4.0a0|>=2.0.0,<2.0.1.0a0|>=2.0.0,<3.0a0|>=0.15.1,<0.15.2.0a0|>=0.15.1,<1.0a0|>=0.13.0,<0.14.0a0|>=0.13.0,<1.0a0|>=0.11.1,<0.12.0a0|>=0.11.0,<0.12.0a0|>=0.9.0,<0.10.0a0',build=py39hf938c1e_8_cpu]
+datasets -> pyarrow[version='>=6.0.0'] -> arrow-cpp[version='6.0.1|>=8.0.0,<8.0.1.0a0|>=8.0.0,<9.0a0|>=4.0.1,<4.0.2.0a0|>=4.0.1,<5.0a0|>=3.0.0,<3.0.1.0a0|>=3.0.0,<4.0a0|>=2.0.0,<2.0.1.0a0|>=2.0.0,<3.0a0',build=py39hf938c1e_8_cpu]
+
+Package libssh2 conflicts for:
+hdf5 -> libcurl[version='>=7.80.0,<8.0a0'] -> libssh2[version='>=1.10.0,<2.0a0|>=1.9.0,<2.0a0']
+libcurl -> libssh2[version='>=1.10.0,<2.0a0|>=1.9.0,<2.0a0|>=1.8.2,<2.0a0|>=1.8.0,<2.0a0']
+aws-sdk-cpp -> libcurl[version='>=7.77.0,<8.0a0'] -> libssh2[version='>=1.10.0,<2.0a0|>=1.9.0,<2.0a0']
+tensorflow-base -> libcurl[version='>=7.84.0,<8.0a0'] -> libssh2[version='>=1.10.0,<2.0a0|>=1.9.0,<2.0a0']
+
+Package hdf5 conflicts for:
+tensorflow-base -> h5py[version='>=3.1.0'] -> hdf5[version='>=1.10.4,<1.10.5.0a0|>=1.10.6,<1.10.7.0a0|>=1.12.1,<1.12.2.0a0']
+h5py -> hdf5[version='>=1.10.1,<1.10.2.0a0|>=1.10.2,<1.10.3.0a0|>=1.10.4,<1.10.5.0a0|>=1.10.6,<1.10.7.0a0|>=1.12.1,<1.12.2.0a0|>=1.8.20,<1.9.0a0|>=1.8.18,<1.8.19.0a0']
+keras -> h5py -> hdf5[version='>=1.10.1,<1.10.2.0a0|>=1.10.2,<1.10.3.0a0|>=1.10.4,<1.10.5.0a0|>=1.10.6,<1.10.7.0a0|>=1.12.1,<1.12.2.0a0|>=1.8.20,<1.9.0a0|>=1.8.18,<1.8.19.0a0']
+
+Package ffmpeg conflicts for:
+torchvision -> ffmpeg[version='>=4.2']
+sentence-transformers -> torchvision -> ffmpeg[version='>=4.2']
+
+Package stack_data conflicts for:
+jupyterlab -> ipython -> stack_data
+ipywidgets -> ipython[version='>=4.0.0'] -> stack_data
+ipykernel -> ipython[version='>=7.23.1'] -> stack_data
+ipython -> stack_data
+
+Package fsspec conflicts for:
+datasets -> fsspec[version='>=2021.05.0|>=2021.11.1']
+transformers -> datasets -> fsspec[version='>=2021.05.0|>=2021.11.1']
+
+Package pytorch conflicts for:
+transformers -> pytorch
+torchvision -> pytorch[version='1.10.0|1.10.1|1.10.2|1.11.0|1.12.0|1.12.1|1.13.0|1.9.1|1.9.0|1.8.1|1.8.0|1.7.1|1.7.0|1.6.0|1.5.1|1.5.0|1.4.0|1.3.1|1.3.0|1.2.0|>=1.1.0|>=1.0.0|>=0.4|>=0.3|>=0.2|1.7.1.*|1.3.1.*']
+torchaudio -> pytorch[version='1.10.0|1.10.1|1.10.2|1.11.0|1.12.0|1.12.1|1.13.0|1.9.1|1.9.0|1.8.1|1.8.0|1.7.1|1.7.0|1.6.0|1.5.1|1.5.0|1.4.0|1.3.1|1.3.0|1.2.0']
+sentence-transformers -> pytorch[version='>=1.6.0']
+sentence-transformers -> torchvision -> pytorch[version='1.10.0|1.10.1|1.10.2|1.11.0|1.12.0|1.12.1|1.13.0|1.9.1|1.9.0|1.8.1|1.8.0|1.7.1|1.7.0|1.6.0|1.5.1|1.5.0|1.4.0|1.3.1|1.3.0|1.2.0|>=1.1.0|>=1.0.0|>=0.4|>=0.3|>=0.2|1.7.1.*|1.3.1.*']
+
+Package orc conflicts for:
+arrow-cpp -> orc[version='>=1.6.5,<1.6.6.0a0|>=1.6.7,<1.6.8.0a0|>=1.7.2,<1.7.3.0a0|>=1.7.4,<1.7.5.0a0|>=1.6.9,<1.6.10.0a0']
+parquet-cpp -> arrow-cpp[version='>=0.13.0'] -> orc[version='>=1.6.5,<1.6.6.0a0|>=1.6.7,<1.6.8.0a0|>=1.7.2,<1.7.3.0a0|>=1.7.4,<1.7.5.0a0|>=1.6.9,<1.6.10.0a0']
+pyarrow -> arrow-cpp[version='>=8.0.0,<8.0.1.0a0'] -> orc[version='>=1.6.5,<1.6.6.0a0|>=1.6.7,<1.6.8.0a0|>=1.7.2,<1.7.3.0a0|>=1.7.4,<1.7.5.0a0|>=1.6.9,<1.6.10.0a0']
+
+Package parso conflicts for:
+jedi -> parso[version='0.1.0|>=0.1.0,<0.2|>=0.2.0|>=0.3.0|>=0.5.0|>=0.5.2|>=0.7.0|>=0.7.0,<0.8.0|>=0.8.0,<0.9.0']
+ipython -> jedi[version='>=0.16'] -> parso[version='0.1.0|>=0.1.0,<0.2|>=0.2.0|>=0.3.0|>=0.5.0|>=0.5.2|>=0.7.0|>=0.7.0,<0.8.0|>=0.8.0,<0.9.0']
+
+Package more-itertools conflicts for:
+importlib_resources -> zipp[version='>=0.4'] -> more-itertools
+zipp -> jaraco.itertools -> more-itertools[version='>=4.0.0']
+importlib_metadata -> zipp[version='>=0.5'] -> more-itertools
+catalogue -> zipp[version='>=0.5'] -> more-itertools
+zipp -> more-itertools
+importlib-metadata -> zipp[version='>=0.5'] -> more-itertools
+
+Package smmap conflicts for:
+gitpython -> gitdb[version='>=4.0.1,<5'] -> smmap[version='>=3.0.1']
+streamlit -> gitpython!=3.1.19 -> smmap[version='>=3.0.1,<4']
+gitdb -> smmap[version='>=3.0.1|>=3.0.1,<4']
+gitpython -> smmap[version='>=3.0.1,<4']
+
+Package markdown conflicts for:
+tensorflow-estimator -> tensorflow-base[version='>=1.15.0,<1.16.0a0'] -> markdown[version='>=2.6.11']
+tensorflow -> tensorboard=2.9 -> markdown[version='>=2.6.11|>=2.6.8']
+tensorboard -> markdown[version='>=2.6.11|>=2.6.8']
+tensorflow-base -> tensorboard=2.9 -> markdown[version='>=2.6.8']
+tensorflow-base -> markdown[version='>=2.6.11']
+
+Package flake8-import-order conflicts for:
+oauthlib -> pyjwt[version='>=1.0.0'] -> flake8-import-order
+pyjwt -> flake8-import-order
+
+Package lame conflicts for:
+torchvision -> ffmpeg[version='>=4.2'] -> lame[version='>=3.100,<3.101.0a0']
+ffmpeg -> lame[version='>=3.100,<3.101.0a0']
+
+Package sniffio conflicts for:
+anyio -> sniffio[version='>=1.1']
+jupyter_server -> anyio[version='>=3.1.0,<4'] -> sniffio[version='>=1.1']
+
+Package funcsigs conflicts for:
+responses -> mock -> funcsigs
+tensorflow-base -> mock[version='>=2.0.0'] -> funcsigs
+pynndescent -> numba[version='>=0.46'] -> funcsigs
+numba -> funcsigs
+tensorflow-estimator -> mock[version='>=2.0.0'] -> funcsigs
+
+Package bz2file conflicts for:
+smart_open -> bz2file
+gensim -> smart_open[version='>=1.8.1'] -> bz2file
+
+Package libutf8proc conflicts for:
+pyarrow -> arrow-cpp==6.0.1=py39hf938c1e_8_cpu -> libutf8proc[version='>=2.7.0,<3.0a0']
+arrow-cpp -> libutf8proc[version='>=2.7.0,<3.0a0']
+parquet-cpp -> arrow-cpp[version='>=0.13.0'] -> libutf8proc[version='>=2.7.0,<3.0a0']
+
+Package libllvm11 conflicts for:
+numba -> llvmlite[version='>=0.39.*,<0.40'] -> libllvm11[version='>=11.0.0,<11.1.0a0|>=11.1.0,<11.2.0a0']
+llvmlite -> libllvm11[version='>=11.0.0,<11.1.0a0|>=11.1.0,<11.2.0a0']
+pynndescent -> llvmlite[version='>=0.30'] -> libllvm11[version='>=11.0.0,<11.1.0a0|>=11.1.0,<11.2.0a0']
+
+Package html5lib conflicts for:
+bleach -> html5lib[version='>=0.99999999|>=0.99999999pre,!=1.0b1,!=1.0b2,!=1.0b3,!=1.0b4,!=1.0b5,!=1.0b6,!=1.0b7,!=1.0b8']
+nbconvert -> bleach -> html5lib[version='>=0.99999999|>=0.99999999pre,!=1.0b1,!=1.0b2,!=1.0b3,!=1.0b4,!=1.0b5,!=1.0b6,!=1.0b7,!=1.0b8']
+
+Package gnutls conflicts for:
+ffmpeg -> gnutls[version='>=3.6.5,<3.7.0a0']
+torchvision -> ffmpeg[version='>=4.2'] -> gnutls[version='>=3.6.5,<3.7.0a0']
+
+Package gensim conflicts for:
+nltk -> gensim
+sentence-transformers -> nltk -> gensim
+
+Package matplotlib-base conflicts for:
+seaborn -> matplotlib[version='>=2.2'] -> matplotlib-base[version='3.1.2|3.1.2|3.1.2|3.1.3|3.1.3|3.1.3|>=3.2.1,<3.2.2.0a0|>=3.2.2,<3.2.3.0a0|>=3.3.1,<3.3.2.0a0|>=3.3.2,<3.3.3.0a0|>=3.3.4,<3.3.5.0a0|>=3.4.2,<3.4.3.0a0|>=3.4.3,<3.4.4.0a0|>=3.5.0,<3.5.1.0a0|>=3.5.1,<3.5.2.0a0|>=3.5.2,<3.5.3.0a0|>=3.5.3,<3.5.4.0a0|>=2.2',build='py36h9aa3819_1|py38h9aa3819_1|py37h9aa3819_0|py38h9aa3819_0|py36h9aa3819_0|py37h9aa3819_1']
+seaborn-base -> matplotlib-base[version='>=2.2']
+seaborn -> matplotlib-base[version='>=3.1,!=3.6.1']
+wordcloud -> matplotlib-base
+bokeh -> matplotlib -> matplotlib-base[version='3.1.2|3.1.2|3.1.2|3.1.3|3.1.3|3.1.3|>=3.2.1,<3.2.2.0a0|>=3.2.2,<3.2.3.0a0|>=3.3.1,<3.3.2.0a0|>=3.3.2,<3.3.3.0a0|>=3.3.4,<3.3.5.0a0|>=3.4.2,<3.4.3.0a0|>=3.4.3,<3.4.4.0a0|>=3.5.0,<3.5.1.0a0|>=3.5.1,<3.5.2.0a0|>=3.5.2,<3.5.3.0a0|>=3.5.3,<3.5.4.0a0',build='py36h9aa3819_1|py38h9aa3819_1|py37h9aa3819_0|py38h9aa3819_0|py36h9aa3819_0|py37h9aa3819_1']
+matplotlib -> matplotlib-base[version='3.1.2|3.1.2|3.1.2|3.1.3|3.1.3|3.1.3|>=3.2.1,<3.2.2.0a0|>=3.2.2,<3.2.3.0a0|>=3.3.1,<3.3.2.0a0|>=3.3.2,<3.3.3.0a0|>=3.3.4,<3.3.5.0a0|>=3.4.2,<3.4.3.0a0|>=3.4.3,<3.4.4.0a0|>=3.5.0,<3.5.1.0a0|>=3.5.1,<3.5.2.0a0|>=3.5.2,<3.5.3.0a0|>=3.5.3,<3.5.4.0a0',build='py36h9aa3819_1|py38h9aa3819_1|py37h9aa3819_0|py38h9aa3819_0|py36h9aa3819_0|py37h9aa3819_1']
+nltk -> matplotlib -> matplotlib-base[version='3.1.2|3.1.2|3.1.2|3.1.3|3.1.3|3.1.3|>=3.2.1,<3.2.2.0a0|>=3.2.2,<3.2.3.0a0|>=3.3.1,<3.3.2.0a0|>=3.3.2,<3.3.3.0a0|>=3.3.4,<3.3.5.0a0|>=3.4.2,<3.4.3.0a0|>=3.4.3,<3.4.4.0a0|>=3.5.0,<3.5.1.0a0|>=3.5.1,<3.5.2.0a0|>=3.5.2,<3.5.3.0a0|>=3.5.3,<3.5.4.0a0',build='py36h9aa3819_1|py38h9aa3819_1|py37h9aa3819_0|py38h9aa3819_0|py36h9aa3819_0|py37h9aa3819_1']
+
+Package subprocess32 conflicts for:
+nltk -> matplotlib -> subprocess32
+seaborn -> matplotlib[version='>=2.2'] -> subprocess32
+matplotlib -> subprocess32
+jupyterlab -> subprocess32
+bokeh -> matplotlib -> subprocess32
+
+Package parquet-cpp conflicts for:
+pyarrow -> parquet-cpp[version='1.5.1.*|>=1.4.0,<1.5.0a0']
+streamlit -> pyarrow[version='>=4.0'] -> parquet-cpp=1.5.1
+datasets -> pyarrow[version='>=6.0.0'] -> parquet-cpp=1.5.1
+
+Package patsy conflicts for:
+seaborn -> patsy
+seaborn -> statsmodels[version='>=0.8.0'] -> patsy[version='>=0.4.0|>=0.5.1|>=0.5.2']
+statsmodels -> patsy[version='>=0.4.0|>=0.5.1|>=0.5.2']
+
+Package commonmark conflicts for:
+streamlit -> rich[version='>=10.11.0'] -> commonmark[version='>=0.9.0,<0.10.0']
+rich -> commonmark[version='>=0.9.0,<0.10.0']
+
+Package importlib_resources conflicts for:
+nbformat -> jsonschema[version='>=2.6'] -> importlib_resources[version='>=1.4.0']
+jupyterlab_server -> jsonschema[version='>=3.0.1'] -> importlib_resources[version='>=1.4.0']
+jsonschema -> importlib_resources[version='>=1.4.0']
+altair -> jsonschema[version='>=3.0'] -> importlib_resources[version='>=1.4.0']
+
+Package toolz conflicts for:
+streamlit -> altair[version='>=3.2.0'] -> toolz
+thinc -> cytoolz[version='>=0.9.0,<0.10'] -> toolz[version='>=0.10.0|>=0.8.0']
+altair -> toolz
+
+Package libfaiss conflicts for:
+faiss -> libfaiss==1.7.2[build=*_cpu]
+faiss-cpu -> libfaiss[version='1.6.5|1.7.0|1.7.1|1.7.3|v1.6.4',build='h0a76292_1_cpu|h0a76292_0_cpu|h0a76292_0_cpu|h0a76292_0_cpu|h04f5b5a_1_cpu']
+
+Package pytz-deprecation-shim conflicts for:
+tzlocal -> pytz-deprecation-shim
+streamlit -> tzlocal[version='>=1.1'] -> pytz-deprecation-shim
+
+Package unittest2 conflicts for:
+keras -> h5py -> unittest2
+tensorflow-base -> h5py[version='>=2.9.0'] -> unittest2
+h5py -> unittest2
+
+Package cython conflicts for:
+tensorflow-base -> grpcio -> cython
+tensorboard -> grpcio[version='>=1.24.3'] -> cython
+gensim -> cython[version='0.29.23|0.29.28|>=0.29.23']
+nltk -> gensim -> cython[version='0.29.23|0.29.28|>=0.29.23']
+grpcio -> cython
+tensorflow-estimator -> grpcio[version='>=1.8.6'] -> cython
+
+Package responses conflicts for:
+transformers -> datasets -> responses[version='<0.19']
+datasets -> responses[version='<0.19']
+
+Package pexpect conflicts for:
+ipywidgets -> ipython[version='>=4.0.0'] -> pexpect[version='>4.3']
+ipython -> pexpect[version='>4.3']
+jupyterlab -> ipython -> pexpect[version='>4.3']
+ipykernel -> ipython[version='>=7.23.1'] -> pexpect[version='>4.3']
+
+Package jupyterlab_widgets conflicts for:
+pydeck -> ipywidgets[version='>=7.0.0'] -> jupyterlab_widgets[version='>=1.0.0|>=3.0.0,<4.0.0']
+ipywidgets -> jupyterlab_widgets[version='>=1.0.0|>=3.0.0,<4.0.0']
+
+Package keras conflicts for:
+tensorflow-base -> keras[version='2.9.*|>=2.7,<2.8']
+tensorflow-estimator -> tensorflow-base==2.7.0=cpu_py39h326c378_0 -> keras[version='>=2.7,<2.8']
+tensorflow -> tensorflow-base==2.9.1=eigen_py38h36d2db2_1 -> keras[version='2.9.*|>=2.7,<2.8']
+
+Package widgetsnbextension conflicts for:
+ipywidgets -> widgetsnbextension[version='>=3.0.0|>=3.1.0,<4.0|>=3.2.0,<4.0.0|>=3.3.0,<3.4.0|>=3.4.0,<3.5.0|>=3.5.0,<3.6.0|>=4.0.0,<5.0.0']
+pydeck -> ipywidgets[version='>=7.0.0'] -> widgetsnbextension[version='>=3.0.0|>=3.1.0,<4.0|>=3.2.0,<4.0.0|>=3.3.0,<3.4.0|>=3.4.0,<3.5.0|>=3.5.0,<3.6.0|>=4.0.0,<5.0.0']
+
+Package gettext conflicts for:
+gnutls -> gettext[version='>=0.19.8.1,<1.0a0|>=0.19.8.1|>=0.21.0,<1.0a0']
+ffmpeg -> gnutls[version='>=3.6.5,<3.7.0a0'] -> gettext[version='>=0.19.8.1,<1.0a0|>=0.19.8.1|>=0.21.0,<1.0a0']
+
+Package jdcal conflicts for:
+datasets -> openpyxl -> jdcal
+openpyxl -> jdcal
+
+Package datasets conflicts for:
+transformers -> datasets
+sentence-transformers -> transformers[version='>=4.6.0,<5.0.0'] -> datasets
+
+Package flit-core conflicts for:
+nbclassic -> argon2-cffi -> flit-core[version='>=3.4,<4']
+argon2-cffi -> flit-core[version='>=3.4,<4']
+notebook -> argon2-cffi -> flit-core[version='>=3.4,<4']
+jupyter_server -> argon2-cffi -> flit-core[version='>=3.4,<4']
+
+Package simplegeneric conflicts for:
+ipython -> simplegeneric[version='>0.8']
+jupyterlab -> ipython -> simplegeneric[version='>0.8']
+ipywidgets -> ipython[version='>=4.0.0'] -> simplegeneric[version='>0.8']
+ipykernel -> ipython[version='>=5.0'] -> simplegeneric[version='>0.8']
+
+Package tensorflow conflicts for:
+keras -> tensorflow[version='<2.0']
+keras -> keras-base=2.4.3 -> tensorflow[version='>=2.2']
+
+Package argon2-cffi-bindings conflicts for:
+nbclassic -> argon2-cffi -> argon2-cffi-bindings
+argon2-cffi -> argon2-cffi-bindings
+notebook -> argon2-cffi -> argon2-cffi-bindings
+jupyter_server -> argon2-cffi -> argon2-cffi-bindings
+
+Package threadpoolctl conflicts for:
+umap-learn -> scikit-learn[version='>=0.22'] -> threadpoolctl[version='>=2.0.0']
+pynndescent -> scikit-learn[version='>=0.19'] -> threadpoolctl[version='>=2.0.0']
+scikit-learn -> threadpoolctl[version='>=2.0.0']
+nltk -> scikit-learn -> threadpoolctl[version='>=2.0.0']
+sentence-transformers -> scikit-learn -> threadpoolctl[version='>=2.0.0']
+
+Package munkres conflicts for:
+fonttools -> munkres
+matplotlib-base -> fonttools[version='>=4.22.0'] -> munkres
+
+Package tensorboard-data-server conflicts for:
+tensorboard -> tensorboard-data-server[version='>=0.6.0,<0.7.0']
+tensorflow-base -> tensorboard=2.9 -> tensorboard-data-server[version='>=0.6.0,<0.7.0']
+tensorflow -> tensorboard=2.9 -> tensorboard-data-server[version='>=0.6.0,<0.7.0']The following specifications were found to be incompatible with your system:
+
+  - feature:/osx-64::__osx==10.16=0
+  - feature:|@/osx-64::__osx==10.16=0
+  - grpcio -> __osx[version='>=10.10']
+  - tensorboard -> grpcio[version='>=1.24.3'] -> __osx[version='>=10.10']
+  - tensorflow-base -> grpcio -> __osx[version='>=10.10']
+  - tensorflow-estimator -> grpcio[version='>=1.8.6'] -> __osx[version='>=10.10']
+
+Your installed version is: 10.16
+
