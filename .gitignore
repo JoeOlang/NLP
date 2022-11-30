@@ -128,17 +128,10 @@ dmypy.json
 # Pyre type checker
 .pyre/
 Sentiment Analysis for Songs/helpers.py
-.DS_Store
-.DS_Store
-Chatbots/.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
-Clustering/bbc-text.csv
 Twitter Streaming/credentials.py
-Practice Chatbot/data/intents.json
-
+Resturant Chatbot
 
 Semantic Search/sampledata
 Semantic Search/Similarity/Drafts
 *.csv
+*.DS_Store
