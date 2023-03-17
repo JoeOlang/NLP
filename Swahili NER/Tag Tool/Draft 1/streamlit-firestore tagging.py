@@ -51,10 +51,9 @@ def main():
     st.markdown("-----")
 
     # define the dropdown options
-    dropdown_options = ["", "PERSON", "NORP", "FAC", "ORG", "GPE", "LOC", "PRODUCT", "EVENT", "WORK_OF_ART", "LAW", 
-                        "LANGUAGE", "DATE", "TIME", "PERCENT", "MONEY", "QUANTITY", "ORDINAL", "CARDINAL"]
+    dropdown_options = ["PERSON", "ORG", "LOC", "PRODUCT", "EVENT", 
+                        "LANGUAGE", "DATE", "TIME", "MONEY", "NUMBER"]
 
-    # Create a list to store new tags, this will extend the existing data
     
 
     # Create a form for user inputs
@@ -91,7 +90,24 @@ def main():
 
     st.markdown('---')
     st.write("For reference, the possible tags are described below:")
-    st.write("PERSON: People, including fictional.", "NORP: Nationalities or religious or political groups.", "FAC: Buildings, airports, highways, bridges, etc.", "ORG: Companies, agencies, institutions, etc.", "GPE: Countries, cities, states.", "LOC: Non-GPE locations, mountain ranges, bodies of water.", "PRODUCT: Objects, vehicles, foods, etc. (Not services.)", "EVENT: Named hurricanes, battles, wars, sports events, etc.", "WORK_OF_ART: Titles of books, songs, etc.", "LAW: Named documents made into laws.", "LANGUAGE: Any named language.", "DATE: Absolute or relative dates or periods.", "TIME: Times smaller than a day.", "PERCENT: Percentage, including ”%“.", "MONEY: Monetary values, including unit.", "QUANTITY: Measurements, as of weight or distance.", "ORDINAL: “first”, “second”, etc.", "CARDINAL: Numerals that do not fall under another type.")
+    st.write("PERSON: People, including fictional.", 
+             "NORP: Nationalities or religious or political groups.", 
+             "FAC: Buildings, airports, highways, bridges, etc.", 
+             "ORG: Companies, agencies, institutions, etc.", 
+             "GPE: Countries, cities, states.", 
+             "LOC: Non-GPE locations, mountain ranges, bodies of water.", 
+             "PRODUCT: Objects, vehicles, foods, etc. (Not services.)", 
+             "EVENT: Named hurricanes, battles, wars, sports events, etc.", 
+             "WORK_OF_ART: Titles of books, songs, etc.", 
+             "LAW: Named documents made into laws.", 
+             "LANGUAGE: Any named language.", 
+             "DATE: Absolute or relative dates or periods.", 
+             "TIME: Times smaller than a day.", 
+             "PERCENT: Percentage, including ”%“.", 
+             "MONEY: Monetary values, including unit.", 
+             "QUANTITY: Measurements, as of weight or distance.", 
+             "ORDINAL: “first”, “second”, etc.", 
+             "CARDINAL: Numerals that do not fall under another type.")
 
 
 if __name__ == "__main__":
