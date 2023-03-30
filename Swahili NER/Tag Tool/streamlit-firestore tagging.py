@@ -4,9 +4,9 @@ import time
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
-# ------------------------------------------------------------------------------------
-# FIRESTORE
-cred = credentials.Certificate("Credentials/ner-tag-tool-firebase-adminsdk-8as43-e118b9010b.json")
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# FIRE STORE DB
+cred = credentials.Certificate("credentials.json")
 
 if not firebase_admin._apps:
     firebase_admin.initialize_app(cred)
@@ -17,13 +17,13 @@ db = firestore.client()
 #df_file = 'sdata.csv'
 sentence_file = 'Data/RFI April - Novmber 2022 titles - cleaned.txt'
 
-# ------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Read txt file with sentences, without '\n'
 with open(sentence_file, 'r') as f:
     sentences = f.read().split('\n')
 
 
-# ------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # A function to select a random sentence and 6 random words from the sentence
 def random_selection():
     select_sent = sentences[random.randint(0, len(sentences))]
@@ -36,8 +36,8 @@ def random_selection():
         return select_sent, select_words
     
 
-# ------------------------------------------------------------------------------------
-# Streamlit app
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Stream-lit app
 def main():
     # Define the list of items to process
     sent , items = random_selection()
@@ -87,6 +87,9 @@ def main():
 
             # Reset the form
             new_tags = []
+    
+
+    # ------------------------------------------------------------------------------------
 
     st.markdown('---')
     st.write("For reference, the possible tags are described below:")
@@ -110,5 +113,5 @@ def main():
              "CARDINAL: Numerals that do not fall under another type.")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     main()
