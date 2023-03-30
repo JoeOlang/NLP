@@ -1,0 +1,10 @@
+{
+  "sentence": "Katika mkutano usio kuwa wa kawaida wa Jumuiya ya Kiuchumi ya Nchi za Afrika Magharibi, ECOWAS, uliofanyika Alhamisi jioni Septemba 22 huko New York, kando ya Mkutano Mkuu wa Umoja wa Mataifa, viongozi wa mataifa ya Afrika Magharibi waliamua kuchukua \"vikwazo vya maendeleo\" dhidi ya utawala wa kijeshi nchini Guinea ambao hautaki kuheshimu kipindi kilichotolewa na jumuiya hiyokuhusu kukabihi madaraka raia.",
+  "token_tags": [
+    { "token": "ya", "tag": "Other" },
+    { "token": "kuheshimu", "tag": "Other" },
+    { "token": "Mkuu", "tag": "Person" },
+    { "token": "New", "tag": "Location" },
+    { "token": "Jumuiya", "tag": "Org" }
+  ]
+}
