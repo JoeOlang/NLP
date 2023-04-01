@@ -3,7 +3,7 @@ import json
 
 # ----------------------------------------------------------------------------------- #
 # 1. Load the data  #
-data = 'Data/RFI April - Novmber 2022 titles - cleaned.txt'
+data = 'Data/RFI April - November 2022 titles - cleaned.txt'
 with open(data, 'r') as f:
     sentences = f.read().split('\n')
 
@@ -27,9 +27,12 @@ tags = ['Person', 'Location', 'Date', 'Number', 'Org', 'Other']
 # ----------------------------------------------------------------------------------- #
 
 number_of_its = int(input('How many sentences do you want to tag? '))
-for i in range(number_of_its):
 
-    doc_tracker = 1
+# initialize the document tracker
+doc_tracker = 1
+
+# a loop to tag the sentences
+for i in range(number_of_its):
 
     sample_sent, sample_toks = random_selection()
 
@@ -60,11 +63,14 @@ for i in range(number_of_its):
     print(result)
     print("*"*len(sample_sent))
 
-    doc_tracker += 1
 
     # save the result
     doc_name = "file" + str(doc_tracker) + ".json"
     with open(doc_name, 'w') as f:
         json.dump(result, f)
+
+    print('Document saved as: ', doc_name)
+
+    doc_tracker += 1
 
 # ----------------------------------------------------------------------------------- #
