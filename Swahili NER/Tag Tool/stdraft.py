@@ -1,7 +1,16 @@
 import streamlit as st
 from streamlit import sidebar
 import io
+import pickle
+import random
 
+# -- FILES --
+# -- Load In-built files (Pickle binary format) --
+with open('Data/sw_sentences.pkl', 'rb') as f:
+    sw_sentences = pickle.load(f)
+
+
+# -- External Files --
 # function to check if a file is a text file
 def is_text_file(file):
     return file.type == 'text/plain'
@@ -14,9 +23,37 @@ def read_file(file):
         sentences = f.read().decode().split('\n')
     return sentences
 
-# main app code
+
+# -- TAGGING --
+# sentence selector
+# Random selection function
+def random_selection(sentences, sen_len, limit = 5):
+
+    if sen_len == 0:
+        # Error message prompt
+        st.error("I currently cant fine any sentences. Please upload a text file with sentences, or use the inbuilt list.")
+        return None, None
+    else:
+        select_sent = sentences[random.randint(0, len(sentences))]
+
+        all_words = select_sent.split()
+        if len(all_words) < 6:      # this is to ensure that the sentence has more than 6 words, if not, it will return None
+            return None
+        else:
+            select_words = random.sample(all_words, k=min(len(all_words), limit))   # limit = number of sentences to select
+            return select_sent, select_words
+    
+# possible tags
+tags = ['Person', 'Location', 'Date', 'Number', 'Org', 'Other']
+
+
+
+
+## ------------------------------------------------------------------------------------------------------------
+
+# main
 def main():
-    st.title("Upload a Text File")
+    st.title("NER Tagging Tool")
 
     # add a border around the upload section
     with sidebar:
@@ -28,11 +65,8 @@ def main():
 
             # if checkbox is checked, use inbuilt list, also handles sentences list object
             if use_builtin_list:
-                sentences = [
-                    "This is the first sentence.",
-                    "This is the second sentence.",
-                    "This is the third sentence.",
-                ]
+                sentences = sw_sentences
+                sen_len = len(sentences)
 
                 st.markdown("Using inbuilt sentence list")
             
@@ -42,6 +76,7 @@ def main():
                 if is_text_file:
                     # convert file to list of sentences
                     sentences = read_file(file)
+                    sen_len = len(sentences)
                 else:
                     st.error("File is not a text file. Please upload a text file.")
                 st.markdown("Using uploaded file sentence list")
@@ -55,7 +90,24 @@ def main():
     print_container = st.container()
     with print_container:
         st.write(f"Number of sentences: {len(sentences)}")
+        st.markdown("----")
 
+    # tagging container
+    tagging_container = st.container()
+
+    # add a border around the tagging section
+    with tagging_container:
+        sent, tokens = random_selection(sentences, sen_len)
+        st.write(sent)
+        st.markdown("----")
+
+        curr_tag = {}
+
+        # loop to tag the sentences
+        for i, token in enumerate(tokens):
+            st.write("Select a tag for the token:")
+            tag = st.radio(token, tags, key = i)
+            st.write(f"Token: {token}, Tag: {tag}")
 
 if __name__ == "__main__":
     main()
