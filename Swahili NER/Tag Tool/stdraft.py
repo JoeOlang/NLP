@@ -32,7 +32,10 @@ def random_selection(sentences, sen_len, limit = 5):
     if sen_len == 0:
         # Error message prompt
         st.error("I currently cant fine any sentences. Please upload a text file with sentences, or use the inbuilt list.")
-        return None, None
+        
+        # terminate the entire program
+        st.stop()
+        
     else:
         select_sent = sentences[random.randint(0, len(sentences))]
 
@@ -82,7 +85,7 @@ def main():
                 st.markdown("Using uploaded file sentence list")
 
             # clear file button
-            if st.button("Clear", type='primary', help="Clear the file", use_container_width=1):
+            if st.button("Clear", type='primary', help="Clear the file"):
                 file = None
 
 
