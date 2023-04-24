@@ -15,7 +15,7 @@ db = firestore.client()
 
 # CONSTANTS
 #df_file = 'sdata.csv'
-sentence_file = 'Data/RFI April - Novmber 2022 titles - cleaned.txt'
+sentence_file = 'Data/RFI April - November 2022 titles - cleaned.txt'
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Read txt file with sentences, without '\n'
