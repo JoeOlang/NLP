@@ -10,12 +10,14 @@ from langchain.schema.runnable import RunnablePassthrough
 from langchain.schema.output_parser import StrOutputParser
 
 import pinecone
+from pinecone import Pinecone, ServerlessSpec
+
 from dotenv import load_dotenv
 import os
 
 
 
-class Bot():
+class ChatBot():
     load_dotenv()
     loader = TextLoader('sample2.txt')
     documents = loader.load()
@@ -27,15 +29,19 @@ class Bot():
     
     embeddings = HuggingFaceEmbeddings()
     
-    pinecone.init(
+    """ pinecone.init(
         api_key = os.getenv('PINECONE_API_KEY'),
         environment = 'gcp-starter'
+    ) """
+    
+    pc = Pinecone(
+        api_key=os.getenv("PINECONE_API_KEY")
     )
     
     index_name = "langchain_demo"
     
     if index_name not in pinecone.list_indexes():
-        pinecone.create_index(
+        pc.create_index(
             name = index_name, metric = "cosine", dimension = 768
         )
         docsearch = Pinecone.from_documents(docs, embeddings, index_name = index_name)
